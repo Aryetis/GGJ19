@@ -368,9 +368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
-  m_cameraSpeed: 0.15
-  verticalTrigger: 30
-  horizontalTrigger: 30
+  m_cameraSpeed: 0.06
+  verticalTrigger: 15
+  horizontalTrigger: 15
 --- !u!1 &1663780115
 GameObject:
   m_ObjectHideFlags: 0
