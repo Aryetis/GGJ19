@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class FieldBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(0,1)] public float RefillPerSecond;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            Energy.AddEnergy(RefillPerSecond * Time.fixedDeltaTime);
+        }
     }
 }

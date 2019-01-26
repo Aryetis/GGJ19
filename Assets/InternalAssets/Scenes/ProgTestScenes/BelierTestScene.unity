@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edf0bc6613f7a44ea3e3c347aa3c395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RefillPerSecond: 0.2
 --- !u!4 &1504848110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3532235035162385932, guid: 4739bfe3345ef8d459e91e295a961f52,
@@ -471,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532235035162385933, guid: 4739bfe3345ef8d459e91e295a961f52,
+        type: 3}
+      propertyPath: FieldRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4739bfe3345ef8d459e91e295a961f52, type: 3}
