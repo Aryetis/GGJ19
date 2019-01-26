@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Side { Front, Right, Back, Left, None };
 
-public class WebPillarBehaviour : MonoBehaviour
+public class WebBoxBehaviour : MonoBehaviour
 {
     private List<Side> touchedSides = new List<Side>();
     private Side currentSide = Side.None;
@@ -19,9 +18,9 @@ public class WebPillarBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentSide != Side.None && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() == null)
+        if(currentSide != Side.None && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() != null)
         {
-            player.GetComponent<PlayerWebBehaviour>().attachPillar(gameObject, currentSide);
+            player.GetComponent<PlayerWebBehaviour>().attachBox(gameObject, currentSide);
         }
     }
 

@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerWebScript : MonoBehaviour
+public class TriggerWebBox : MonoBehaviour
 {
     [SerializeField]
-    public Side triggerSide;
+    private Side triggerSide;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
-            GetComponentInParent<WebPillarBehaviour>().playerTouchedTrigger(triggerSide);
+            GetComponentInParent<WebBoxBehaviour>().playerTouchedTrigger(triggerSide);
         }
     }
 
@@ -19,7 +19,7 @@ public class TriggerWebScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GetComponentInParent<WebPillarBehaviour>().playerExitTrigger(triggerSide);
+            GetComponentInParent<WebBoxBehaviour>().playerExitTrigger(triggerSide);
         }
     }
 }
