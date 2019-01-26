@@ -10,9 +10,6 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField]
     private float targettingDuration = 4;
 
-    [SerializeField]
-    private GameObject radius;
-
     private GameObject player;
     private float targettingTimer;
 
