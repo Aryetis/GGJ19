@@ -18,7 +18,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Move 
         m_move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * m_speed * Time.deltaTime ;
         CC.Move(m_move);
+
+        // Look forward
+        if (m_move != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(m_move);
     }
 }
