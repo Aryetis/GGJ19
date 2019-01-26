@@ -6,7 +6,7 @@ public class FloorSwitch : MonoBehaviour
 {
     private enum SwitchType
     {
-        Toggle, Hold, Multiple
+        Toggle, OneWay, ToggleCombined
     }
 
     [SerializeField] private GameObject GameObjectLinkedToAction;
@@ -34,7 +34,7 @@ public class FloorSwitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (switchType == SwitchType.Toggle)
+        if (switchType == SwitchType.Toggle || switchType == SwitchType.OneWay)
         {
             if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
                 || col.gameObject.CompareTag("MovableBlock"))
