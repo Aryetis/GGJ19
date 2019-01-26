@@ -44,6 +44,25 @@ public class ChargePower : MonoBehaviour
             {
                 // Move 
                 m_move = new Vector3(transform.forward.x, -gravityWhileDashing, transform.forward.z) * Speed * Time.deltaTime;
+
+                //int inputDirectionSnappedX = 0, inputDirectionSnappedY = 0;
+                //if (Input.GetAxis("Horizontal") < -0.5f )
+                //    inputDirectionSnappedX = -1 ;
+                //else if (Input.GetAxis("Horizontal") > 0.5f)
+                //    inputDirectionSnappedX = 1;
+
+                //if (Input.GetAxis("Vertical") < -0.5f)
+                //    inputDirectionSnappedY = -1;
+                //else if (Input.GetAxis("Vertical") > 0.5f)
+                //    inputDirectionSnappedY = 1;
+
+                //m_move = new Vector3
+                //    (
+                //        inputDirectionSnappedX,
+                //        -gravityWhileDashing,
+                //        inputDirectionSnappedY
+                //    ) * Speed * Time.deltaTime;
+
                 CC.Move(m_move);
 
                 // Drain energy
