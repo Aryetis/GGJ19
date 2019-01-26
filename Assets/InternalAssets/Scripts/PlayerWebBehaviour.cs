@@ -10,6 +10,12 @@ public class PlayerWebBehaviour : MonoBehaviour
     [SerializeField]
     private float stringMoveSpeed = 0.5f;
 
+    [SerializeField]
+    private float damageTooFar = 15;
+
+    [SerializeField]
+    private float damageObstructed = 7;
+
     private GameObject attachedPillar;
     private GameObject attachedBox;
     private float initialSpeed;
@@ -58,14 +64,14 @@ public class PlayerWebBehaviour : MonoBehaviour
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, 0.015f);
                 transform.position = smoothedPosition;
                 hasTakenDamage = true;
-                webLife -= 15;
+                webLife -= damageTooFar;
             }
 
             RaycastHit hit;
             if (Physics.Raycast(transform.position, (attachedPillar.transform.position - transform.position), out hit) && hit.transform.gameObject != attachedPillar)
             {
                 hasTakenDamage = true;
-                webLife -= 5;
+                webLife -= damageObstructed;
             }
             if (!hasTakenDamage)
             {
@@ -164,5 +170,4 @@ public class PlayerWebBehaviour : MonoBehaviour
             detachPillar();
         }
     }
-
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropTrapBehavior : MonoBehaviour
+public class DropTrapBehavior : TogglableInterface
 {
     public float timeToActivate = 0.6f;
     public float timeToStayOpen = 3.0f;
@@ -11,6 +11,7 @@ public class DropTrapBehavior : MonoBehaviour
     private GameObject leftDoor, rightDoor;
     private bool ticking = false;
     private bool open = false;
+    private bool armed = true;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +50,7 @@ public class DropTrapBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && armed)
         {
             ticking = true;
         }
@@ -62,5 +63,15 @@ public class DropTrapBehavior : MonoBehaviour
             ticking = false;
             timerToActivate = timeToActivate;
         }
+    }
+
+    public override void ToggleOff()
+    {
+        armed = true;
+    }
+
+    public override void ToggleOn()
+    {
+        armed = false;
     }
 }
