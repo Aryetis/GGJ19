@@ -7,6 +7,8 @@ TagManager:
   - Ramp
   - DestructibleWall
   - Floor
+  - Totem
+  - TotemField
   layers:
   - Default
   - TransparentFX

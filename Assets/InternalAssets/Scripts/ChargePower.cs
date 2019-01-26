@@ -73,7 +73,7 @@ public class ChargePower : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.CompareTag("DestructibleWall"))
+        if (hit.gameObject.CompareTag("DestructibleWall") && chargeActive)
         {
             // TODO Spawn FX
             Destroy(hit.gameObject);
