@@ -7,9 +7,17 @@ public class PlayerWebBehaviour : MonoBehaviour
     [SerializeField]
     private float maxDistanceWithWeb = 20;
 
+    [SerializeField]
+    private float stringMoveSpeed = 0.5f;
+
     private GameObject attachedPillar;
+    private GameObject attachedBox;
     private float initialSpeed;
     private CharacterController CC;
+    private Side attachedSide=Side.None;
+
+    private Vector3 target;
+    private bool isBoxMoving = false;
 
     private float webLife = 100f;
 
@@ -22,12 +30,27 @@ public class PlayerWebBehaviour : MonoBehaviour
         CC = GetComponent<CharacterController>();
     }
 
+    private void Update()
+    {
+        if (isBoxMoving)
+        {
+            moveBoxTowardPillar(0);
+        }
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
         if(attachedPillar != null)
         {
-            GetComponent<LineRenderer>().SetPosition(0, transform.position);
+            if (!isBoxMoving)
+            {
+                GetComponent<LineRenderer>().SetPosition(0, transform.position);
+            }
+            else
+            {
+                GetComponent<LineRenderer>().SetPosition(0, attachedBox.transform.position);
+            }
             bool hasTakenDamage = false;
             if (Vector3.Distance(transform.position, attachedPillar.transform.position) >= maxDistanceWithWeb)
             {
@@ -60,7 +83,7 @@ public class PlayerWebBehaviour : MonoBehaviour
         return attachedPillar;
     }
 
-    public void attachPillar(GameObject pillar)
+    public void attachPillar(GameObject pillar, Side side)
     {
         if(pillar.GetComponent<WebPillarBehaviour>() == null)
         {
@@ -70,12 +93,76 @@ public class PlayerWebBehaviour : MonoBehaviour
         GetComponentInChildren<LineRenderer>().SetPosition(1, pillar.transform.position);
         GetComponentInChildren<LineRenderer>().enabled = true;
         webLife = 100;
+        attachedSide = side;
     }
 
     public void detachPillar()
     {
-        GetComponentInChildren<LineRenderer>().enabled = false;
-        attachedPillar = null;
+        if (!isBoxMoving)
+        {
+            GetComponentInChildren<LineRenderer>().enabled = false;
+            attachedPillar = null;
+            attachedSide = Side.None;
+        }
+    }
+
+    public void attachBox(GameObject box, Side side)
+    {
+        switch (attachedSide)
+        {
+            case Side.Left:
+                if(side == Side.Right)
+                {
+                    startMovingBox(box);
+                }
+                break;
+            case Side.Right:
+                if(side == Side.Left){
+                    startMovingBox(box);
+                }
+                break;
+            case Side.Front:
+                if(side == Side.Back)
+                {
+                    startMovingBox(box);
+                }
+                break;
+            case Side.Back:
+                if(side == Side.Front)
+                {
+                    startMovingBox(box);
+                }
+                break;
+                
+        }
+    }
+
+    private void startMovingBox(GameObject box)
+    {
+        attachedBox = box;
+        foreach (Transform pillarTrigger in attachedPillar.transform)
+        {
+            if (pillarTrigger.GetComponent<TriggerWebScript>().triggerSide == attachedSide)
+            {
+                this.target = pillarTrigger.position;
+                isBoxMoving = true;
+                attachedBox.GetComponent<Collider>().enabled = false;
+                break;
+            }
+         }
+
+    }
+
+    private void moveBoxTowardPillar(float progress)
+    {
+        attachedBox.transform.position = Vector3.MoveTowards(attachedBox.transform.position, target, stringMoveSpeed);
+        if(attachedBox.transform.position == target)
+        {
+            attachedBox.GetComponent<Collider>().enabled = true;
+            attachedBox = null;
+            isBoxMoving = false;
+            detachPillar();
+        }
     }
 
 }
