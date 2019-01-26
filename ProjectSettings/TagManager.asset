@@ -10,6 +10,7 @@ TagManager:
   - Totem
   - TotemField
   - MovableBlock
+  - FloorSwitch
   layers:
   - Default
   - TransparentFX

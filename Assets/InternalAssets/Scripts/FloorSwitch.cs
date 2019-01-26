@@ -8,23 +8,75 @@ public class FloorSwitch : MonoBehaviour
     {
         Toggle, Hold, Multiple
     }
-    private enum ActionType
-    {
-        OpenDoor, TurnOff
-    }
 
+    [SerializeField] private GameObject GameObjectLinkedToAction;
+    [SerializeField] private GameObject linkedButton;
     [SerializeField] private SwitchType switchType;
-    [SerializeField] private ActionType actionType;
+
+    private TogglableInterface tiLinkedObj;
+    private int nbrOfInteractorOnButtons = 0;
+    private bool toggled = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tiLinkedObj = GameObjectLinkedToAction.GetComponent<TogglableInterface>();
+        if (tiLinkedObj == null)
+        {
+            tiLinkedObj = GameObjectLinkedToAction.GetComponentInChildren<TogglableInterface>();
+        }
+        if (tiLinkedObj == null)
+        {
+            Debug.Log("Floor switch :" + gameObject.name + " not linked to a TogglableInterface");
+            Debug.Break();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider col)
     {
-        
+        if (switchType == SwitchType.Toggle)
+        {
+            if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
+                || col.gameObject.CompareTag("MovableBlock"))
+            {
+                // TODO anim button
+                IncreaseInteractors();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (switchType == SwitchType.Toggle)
+        {
+            if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
+            || col.gameObject.CompareTag("MovableBlock"))
+            {
+                // TODO anim button
+                DecreaseInteractors();
+            }
+        }
+    }
+
+    public void IncreaseInteractors()
+    {
+        ++nbrOfInteractorOnButtons;
+        if (!toggled)
+        {
+            tiLinkedObj.ToggleOn();
+            toggled = true;
+        }
+Debug.Log("Increased nbrOfInteractorOnButtons to : " + nbrOfInteractorOnButtons);
+    }
+
+    public void DecreaseInteractors()
+    {
+        --nbrOfInteractorOnButtons;
+        if (nbrOfInteractorOnButtons <= 0)
+        {
+            tiLinkedObj.ToggleOff();
+            toggled = false;
+        }
+Debug.Log("Decreased nbrOfInteractorOnButtons to : " + nbrOfInteractorOnButtons);
     }
 }

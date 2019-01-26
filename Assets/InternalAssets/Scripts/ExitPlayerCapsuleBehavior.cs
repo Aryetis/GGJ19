@@ -10,7 +10,6 @@ public class ExitPlayerCapsuleBehavior : MonoBehaviour
     {
         if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField")))
         {
-            Debug.Log("COLLIDING WITH : " + other.gameObject.name);
             ++nbrCollisions;
             transform.parent.GetComponent<TotemBehavior>().allowUnfusion = false;
         }
@@ -20,7 +19,6 @@ public class ExitPlayerCapsuleBehavior : MonoBehaviour
     {
         if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField")))
         {
-            Debug.Log("UNCOLLIDING WITH : " + other.gameObject.name);
             --nbrCollisions;
             if (nbrCollisions <= 0)
                 transform.parent.GetComponent<TotemBehavior>().allowUnfusion = true;
