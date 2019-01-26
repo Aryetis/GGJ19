@@ -11,9 +11,10 @@ public class Energy : MonoBehaviour
     void Start()
     {
         m_energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
+        Value = 1.0f;
     }
 
-    public float Value
+    public static float Value
     {
         get { return m_value; }
         set

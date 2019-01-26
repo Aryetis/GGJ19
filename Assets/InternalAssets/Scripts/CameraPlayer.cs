@@ -48,7 +48,6 @@ public class CameraPlayer : MonoBehaviour
         {
             Vector2 camToPlayerScreenVectorNm = new Vector2(m_playerOffset.x / horizontalTrigger,
                                                              m_playerOffset.y / verticalTrigger * -1.0f);
-            Debug.Log("camToPlayerScreenVectorNm : " + camToPlayerScreenVectorNm);
             Vector3 camDesiredPosition = Cam.transform.position + new Vector3(camToPlayerScreenVectorNm.x, 0, camToPlayerScreenVectorNm.y);
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, camDesiredPosition, m_cameraSpeed);
             transform.position = smoothedPosition;
