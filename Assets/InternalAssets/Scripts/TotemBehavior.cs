@@ -8,6 +8,8 @@ public class TotemBehavior : MonoBehaviour
     public float gravity = 1.0f;
     public float m_speed = 1.0f;
 
+    private int m_cameraType = 0;
+
     public static bool PlayerFusioned
         {
             get
@@ -49,8 +51,27 @@ public class TotemBehavior : MonoBehaviour
     {
         if (PlayerFusioned)
         {
-            // Move 
-            m_move = new Vector3(Input.GetAxis("Horizontal"), -gravity, Input.GetAxis("Vertical")) * m_speed * Time.deltaTime;
+            // Move
+            if (m_cameraType == 0)
+            {
+                Vector3 foo = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
+                m_move = (Input.GetAxis("Horizontal") * Camera.main.transform.right
+                        + Vector3.down * gravity
+                        + Input.GetAxis("Vertical") * foo) * m_speed * Time.deltaTime;
+            }
+            else
+            {
+                m_move = new Vector3
+                (
+                Input.GetAxis("Horizontal"),
+                -gravity,
+                Input.GetAxis("Vertical")
+                ) * m_speed * Time.deltaTime;
+                // <=>
+                //m_move = (Input.GetAxis("Horizontal") * Floor.transform.right 
+                //        + Vector3.down * gravity
+                //        + Input.GetAxis("Vertical") * Floor.transform.forward ) * m_speed * Time.deltaTime;
+            }
             CC.Move(m_move);
 
             // Look forward

@@ -11,17 +11,40 @@ public class PlayerMovement : MonoBehaviour
     private static Vector3 m_move;
     private static CharacterController CC;
     private static bool m_collidingTotem = false;
+    private GameObject Floor;
+
+    private int m_cameraType = 0;
     
     void Start()
     {
         staticGravity = gravity;
         CC = GetComponent<CharacterController>();
+        Floor = GameObject.Find("Floor");
     }
     
     void Update()
     {
-        // Move 
-        m_move = new Vector3(Input.GetAxis("Horizontal"), -gravity, Input.GetAxis("Vertical")) * m_speed * Time.deltaTime ;
+        // Move
+        if (m_cameraType == 0)
+        {
+            Vector3 foo = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
+            m_move = (Input.GetAxis("Horizontal") * Camera.main.transform.right
+                    + Vector3.down * gravity
+                    + Input.GetAxis("Vertical") * foo) * m_speed * Time.deltaTime;
+        }
+        else
+        {
+            m_move = new Vector3
+            (
+            Input.GetAxis("Horizontal"),
+            -gravity,
+            Input.GetAxis("Vertical")
+            ) * m_speed * Time.deltaTime;
+            // <=>
+            //m_move = (Input.GetAxis("Horizontal") * Floor.transform.right 
+            //        + Vector3.down * gravity
+            //        + Input.GetAxis("Vertical") * Floor.transform.forward ) * m_speed * Time.deltaTime;
+        }
         CC.Move(m_move);
 
         // Look forward
