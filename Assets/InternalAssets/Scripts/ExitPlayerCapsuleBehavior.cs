@@ -8,7 +8,7 @@ public class ExitPlayerCapsuleBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField")))
+        if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField") || other.gameObject.CompareTag("IgnoredByTotemExit")))
         {
             Debug.Log("COLLIDING WITH : " + other.gameObject.name);
             ++nbrCollisions;
@@ -18,7 +18,7 @@ public class ExitPlayerCapsuleBehavior : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField")))
+        if (!(other.gameObject.CompareTag("Totem") || other.gameObject.CompareTag("TotemField") || other.gameObject.CompareTag("IgnoredByTotemExit")))
         {
             Debug.Log("UNCOLLIDING WITH : " + other.gameObject.name);
             --nbrCollisions;
