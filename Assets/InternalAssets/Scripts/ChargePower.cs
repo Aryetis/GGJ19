@@ -12,6 +12,7 @@ public class ChargePower : MonoBehaviour
     private bool chargeActive;
     private Vector3 m_move;
     private CharacterController CC;
+    private bool m_stopOnFloorTouched = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +39,11 @@ public class ChargePower : MonoBehaviour
 
         if (chargeActive)
         {
-            if (Energy.Value <= 0.0f)
+            if (Energy.Value <= 0.0f && CC.isGrounded)
                 StopCharge();
             else
             {
+Debug.Log("CHARGING !!!");
                 // Move 
                 m_move = new Vector3(transform.forward.x, -gravityWhileDashing, transform.forward.z) * Speed * Time.deltaTime;
 
@@ -84,10 +86,12 @@ public class ChargePower : MonoBehaviour
         {
             StopCharge();
         }
+
     }
 
     private void StopCharge()
     {
+Debug.Log("STOP CHARGING");
         // TODO restore stock camera speed value
         chargeActive = false;
         pm.enabled = true;
