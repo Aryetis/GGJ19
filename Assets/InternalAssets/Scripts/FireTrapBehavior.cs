@@ -11,7 +11,7 @@ public class FireTrapBehavior : TogglableInterface
     void Start()
     {
         pd = GameObject.Find("Player").GetComponent<PlayerDeath>();
-        fire = transform.Find("Eff_Fire").gameObject;
+        fire = transform.parent.Find("Eff_Fire").gameObject;
     }
 
     private void OnTriggerEnter(Collider col)
