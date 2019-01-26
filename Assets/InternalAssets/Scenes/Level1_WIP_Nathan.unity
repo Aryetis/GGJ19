@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -356,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -437,6 +445,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -601,6 +617,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -753,6 +773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -834,6 +858,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -917,6 +945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -998,6 +1030,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1186,6 +1222,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1429,6 +1469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19
@@ -1510,6 +1554,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1593,6 +1641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -1674,6 +1726,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1764,6 +1820,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1884,6 +1944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -1965,6 +2029,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2134,6 +2202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19
@@ -2301,6 +2373,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2556,6 +2632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -2638,6 +2718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Example Pieced Prefab 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013311032376, guid: ba861b6b4f5559f41a4f1188440fe846, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010542303642, guid: ba861b6b4f5559f41a4f1188440fe846, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.84
@@ -2694,6 +2778,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2783,6 +2871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -2839,6 +2931,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3008,6 +3104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x4 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -3097,6 +3197,10 @@ PrefabInstance:
     - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_Name
       value: Block 3x4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011328041476, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000013879755266, guid: 4fa2fe5ac82445743bc208c6699715a8, type: 3}
       propertyPath: m_LocalPosition.x

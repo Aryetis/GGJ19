@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55
@@ -194,6 +198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 2x5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010465144814, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010613338836, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36
@@ -264,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -368,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,6 +490,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -623,6 +643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
@@ -739,6 +763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x2x3
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012031035170, guid: 71196c1c8ebc5bc49bd66bda5cd4722c, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012147459384, guid: 71196c1c8ebc5bc49bd66bda5cd4722c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37
@@ -828,6 +856,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16
@@ -1051,6 +1087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1122,6 +1162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55
@@ -1192,6 +1236,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1299,6 +1347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -1381,6 +1433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -1451,6 +1507,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1534,6 +1594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1604,6 +1668,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1676,6 +1744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -1746,6 +1818,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1818,6 +1894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -1880,6 +1960,10 @@ PrefabInstance:
     - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_Name
       value: Block 5x5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1951,6 +2035,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2034,6 +2122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x5
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014024592840, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013936088174, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36
@@ -2098,6 +2190,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2169,6 +2265,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2252,6 +2352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014024592840, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013936088174, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -2322,6 +2426,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2399,6 +2507,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2482,6 +2594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -2564,6 +2680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36
@@ -2634,6 +2754,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2706,6 +2830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52
@@ -2777,6 +2905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -2839,6 +2971,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2911,6 +3047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36
@@ -2981,6 +3121,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3053,6 +3197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -3123,6 +3271,10 @@ PrefabInstance:
     - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_Name
       value: Block 5x5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3278,6 +3430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -3360,6 +3516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -3431,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36
@@ -3501,6 +3665,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3664,6 +3832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36
@@ -3735,6 +3907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28
@@ -3805,6 +3981,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3888,6 +4068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55
@@ -3959,6 +4143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 3x5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014024592840, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013936088174, guid: a4cae002562d87e4ea0f3f9841c73dff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -4029,6 +4217,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4199,6 +4391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -4269,6 +4465,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4341,6 +4541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -4411,6 +4615,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4494,6 +4702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36
@@ -4564,6 +4776,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4647,6 +4863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36
@@ -4724,6 +4944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28
@@ -4794,6 +5018,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4883,6 +5111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -4953,6 +5185,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5028,7 +5264,7 @@ GameObject:
   - component: {fileID: 1433189243}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ramp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5116,6 +5352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55
@@ -5191,6 +5431,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010465144814, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010613338836, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55
@@ -5261,6 +5505,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5333,6 +5581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5389,6 +5641,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5460,6 +5716,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5543,6 +5803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -5614,6 +5878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -5684,6 +5952,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5854,6 +6126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16
@@ -5942,6 +6218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5998,6 +6278,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6081,6 +6365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 4x8
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012466244970, guid: 8ffdfab48bca7f449af83d562ffbf4c7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010837837732, guid: 8ffdfab48bca7f449af83d562ffbf4c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -6151,6 +6439,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6288,6 +6580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -6344,6 +6640,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6427,6 +6727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -6502,6 +6806,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010465144814, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010613338836, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55
@@ -6573,6 +6881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -6643,6 +6955,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6835,6 +7151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -7015,6 +7335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 8x8 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
@@ -7097,6 +7421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -7168,6 +7496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -7224,6 +7556,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7307,6 +7643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 2x5
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010465144814, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010613338836, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -7376,6 +7716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 2x5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010465144814, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010613338836, guid: 8dd7d95b908ae594f9289b4d236d45fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36
@@ -7438,6 +7782,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7509,6 +7857,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7587,6 +7939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground X Bright 4x8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012466244970, guid: 8ffdfab48bca7f449af83d562ffbf4c7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010837837732, guid: 8ffdfab48bca7f449af83d562ffbf4c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -7657,6 +8013,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7740,6 +8100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -7810,6 +8174,10 @@ PrefabInstance:
     - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_Name
       value: Ground X Bright 8x8 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010170218244, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4000011187452424, guid: 0107a43770ed3e043a98f20347fcf8ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7918,6 +8286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55
@@ -7988,6 +8360,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8085,6 +8461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 4x5 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -8156,6 +8536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block 5x5
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013732855244, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011687870398, guid: 53243bf9ab07b624bbc0d41f65464f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36
@@ -8226,6 +8610,10 @@ PrefabInstance:
     - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_Name
       value: Block 4x5 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014023033832, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 4000011307245102, guid: 264789f214482b642a8a121f6dd5b2c1, type: 3}
       propertyPath: m_LocalPosition.x
