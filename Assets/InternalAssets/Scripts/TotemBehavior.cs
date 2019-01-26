@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class TotemBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float FieldRadius;
+    private GameObject m_field;
+
     void Start()
     {
-        
+        m_field = transform.Find("Field").gameObject;
+        m_field.transform.localScale = new Vector3(FieldRadius, FieldRadius, FieldRadius);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         

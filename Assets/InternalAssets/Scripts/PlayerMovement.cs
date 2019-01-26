@@ -8,14 +8,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 m_move;
     private CharacterController CC; 
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         CC = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         // Move 

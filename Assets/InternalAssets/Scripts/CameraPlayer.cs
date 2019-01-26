@@ -19,8 +19,7 @@ public class CameraPlayer : MonoBehaviour
     //          |      X     |        until * is back in the offset
     //          |            |     (X : center of screen ; * : player ; borders : 
     //          |------------|      invisible screen portion triggering the camera movements, determined by verticalTrigger, horizontalTrigger)
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (m_player == null)
@@ -33,8 +32,7 @@ public class CameraPlayer : MonoBehaviour
 
         Cam = GetComponent<Camera>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         m_playerScreenPos = Cam.WorldToScreenPoint(m_player.transform.position);
