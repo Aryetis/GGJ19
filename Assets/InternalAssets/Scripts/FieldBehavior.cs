@@ -13,4 +13,20 @@ public class FieldBehavior : MonoBehaviour
             Energy.AddEnergy(RefillPerSecond * Time.fixedDeltaTime);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<TurretBehaviour>())
+        {
+            other.GetComponent<TurretBehaviour>().enabled = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<TurretBehaviour>())
+        {
+            other.GetComponent<TurretBehaviour>().enabled = true;
+        }
+    }
 }
