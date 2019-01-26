@@ -21,7 +21,7 @@ public class WebPillarBehaviour : MonoBehaviour
     {
         if(currentSide != Side.None && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() == null)
         {
-
+            player.GetComponent<PlayerWebBehaviour>().attachPillar(gameObject);
         }
     }
 
