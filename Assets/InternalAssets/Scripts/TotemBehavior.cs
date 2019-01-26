@@ -45,6 +45,7 @@ public class TotemBehavior : MonoBehaviour
         CC = GetComponent<CharacterController>();
         m_exitPlayerCapsule = transform.Find("ExitPlayerCapsule").gameObject;
         m_exitPlayerCapsule.SetActive(false);
+        allowUnfusion = true;
     }
     
     void Update()

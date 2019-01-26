@@ -9,6 +9,7 @@ public class CameraPlayer : MonoBehaviour
     [Range(0,100)] public float verticalTrigger = 30.0f;
     [Range(0, 100)] public float horizontalTrigger = 30.0f;
 
+    private GameObject m_totem;
     private Camera Cam;
     private Vector3 m_playerScreenPos;
     private Vector2 m_playerOffset; // distance between center of screen and player in screen size percentage
@@ -29,13 +30,17 @@ public class CameraPlayer : MonoBehaviour
             Debug.Log("!!! GIVE THE PLAYER TO THE CAMERA, OR NAME THE PLAYER \"Player\" !!!");
             Debug.Break();
         }
+        m_totem = GameObject.Find("Totem");
 
         Cam = GetComponent<Camera>();
     }
     
     void Update()
     {
-        m_playerScreenPos = Cam.WorldToScreenPoint(m_player.transform.position);
+        if (TotemBehavior.PlayerFusioned)
+            m_playerScreenPos = Cam.WorldToScreenPoint(m_totem.transform.position);
+        else
+            m_playerScreenPos = Cam.WorldToScreenPoint(m_player.transform.position);
         m_playerOffset = new Vector2(
                                      (m_playerScreenPos.x - Cam.pixelWidth / 2.0f) / Cam.pixelWidth * 200.0f
                                    , (m_playerScreenPos.y - Cam.pixelHeight / 2.0f) / Cam.scaledPixelHeight * -200.0f
