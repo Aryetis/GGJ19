@@ -56,8 +56,10 @@ public class ChargePower : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("DestructibleWall") && chargeActive)
         {
-            // TODO Spawn FX
-            Destroy(hit.gameObject);
+            hit.gameObject.transform.Find("CFX2_RockHit").GetComponent<ParticleSystem>().Play();
+            hit.gameObject.GetComponent<Renderer>().enabled = false;
+            hit.gameObject.GetComponent<Collider>().enabled = false;
+            Destroy(hit.gameObject, hit.transform.GetComponentInChildren<ParticleSystem>().main.duration);
         }
         else if (hit.gameObject.CompareTag("Ramp") || hit.gameObject.CompareTag("Floor") 
             || hit.gameObject.CompareTag("FloorSwitch") || hit.gameObject.CompareTag("IgnoredByTotemExit") )
