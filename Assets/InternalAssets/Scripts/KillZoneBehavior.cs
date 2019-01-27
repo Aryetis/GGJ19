@@ -14,11 +14,13 @@ public class KillZoneBehavior : TogglableInterface
 
     private void OnTriggerEnter(Collider col)
     {
-        if (armed &&
-            (col.gameObject.CompareTag("Player")
-            || col.gameObject.CompareTag("Totem") && TotemBehavior.PlayerFusioned))
+        if (armed && (col.gameObject.CompareTag("Player")))
         {
             pd.killPlayer();
+        }
+        else if (armed && gameObject.CompareTag("Totem") && TotemBehavior.PlayerFusioned)
+        {
+            pd.killTotem();
         }
     }
 
