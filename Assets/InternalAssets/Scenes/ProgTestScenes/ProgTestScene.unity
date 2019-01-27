@@ -5393,7 +5393,7 @@ PrefabInstance:
     - target: {fileID: 1561677989320726554, guid: ef6dce1a7dff35044b0b2129885bed27,
         type: 3}
       propertyPath: totemLevel
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef6dce1a7dff35044b0b2129885bed27, type: 3}
