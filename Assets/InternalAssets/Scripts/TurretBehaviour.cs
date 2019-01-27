@@ -67,7 +67,7 @@ public class TurretBehaviour : MonoBehaviour
     private void fire()
     {
         hasFired = true;
-        transform.GetComponentInChildren<ParticleSystem>().Play();
+        transform.Find("Beam").GetComponent<ParticleSystem>().Play();
         player.GetComponent<PlayerDeath>().killPlayer();
     }
 

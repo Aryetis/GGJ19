@@ -31,6 +31,9 @@ public class PlayerDeath : MonoBehaviour
 
     public void reloadScene()
     {
+        pm.enabled = true;
+        TotemBehavior.PlayerFusioned = false;
+        tb.GetComponent<TotemBehavior>().enabled = false;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
