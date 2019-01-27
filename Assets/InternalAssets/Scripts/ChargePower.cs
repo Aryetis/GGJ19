@@ -23,12 +23,12 @@ public class ChargePower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 2") && Energy.Value > 0.0f && !chargeActive)
+        if ((Input.GetKeyDown("joystick button 2") || Input.GetKeyDown(KeyCode.C)) && Energy.Value > 0.0f && !chargeActive)
         {
             pm.enabled = false;
             Time.timeScale = 0.2f;
         }
-        else if (Input.GetKeyUp("joystick button 2") && !chargeActive)
+        else if ((Input.GetKeyUp("joystick button 2") || Input.GetKeyDown(KeyCode.C) )&& !chargeActive )
         {
             Time.timeScale = 1.0f;
             // TODO spawn FX

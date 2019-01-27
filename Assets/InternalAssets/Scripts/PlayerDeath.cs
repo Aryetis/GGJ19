@@ -16,7 +16,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp("joystick button 6"))
+        if(Input.GetKeyUp("joystick button 6") || Input.GetKeyDown(KeyCode.Escape))
         {
             reloadScene();
         }
