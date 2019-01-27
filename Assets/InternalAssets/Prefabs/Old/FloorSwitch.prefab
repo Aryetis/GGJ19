@@ -140,6 +140,8 @@ MonoBehaviour:
   GameObjectLinkedToAction: {fileID: 0}
   linkedButton: {fileID: 0}
   switchType: 1
+  turnedOnMat: {fileID: 2100000, guid: 767017ede2b91fa48896b6ba758c9df1, type: 2}
+  turnedOffMat: {fileID: 2100000, guid: 422387323318cdf4eabe1cd36a168537, type: 2}
 --- !u!65 &200668709
 BoxCollider:
   m_ObjectHideFlags: 0
