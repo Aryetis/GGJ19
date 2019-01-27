@@ -11,8 +11,8 @@ public class DoorBehavior : TogglableInterface
     void Start()
     {
         DoorLeaf = transform.Find("DoorLeaf").gameObject;
-        upPosition = transform.position;
-        downPosition = transform.position + Vector3.down * 12.0f;
+        upPosition = DoorLeaf.transform.position;
+        downPosition = DoorLeaf.transform.position + Vector3.down * 12.0f;
         movingUp = false;
         movingDown = false;
     }
@@ -21,16 +21,16 @@ public class DoorBehavior : TogglableInterface
     {
         if (movingUp)
         {
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, upPosition, 0.02f);
-            transform.position = smoothedPosition;
-            if ((transform.position - upPosition).magnitude <= 0.02f)
+            Vector3 smoothedPosition = Vector3.Lerp(DoorLeaf.transform.position, upPosition, 0.02f);
+            DoorLeaf.transform.position = smoothedPosition;
+            if ((DoorLeaf.transform.position - upPosition).magnitude <= 0.02f)
                 movingUp = false;
         }
         else if (movingDown)
         {
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, downPosition, 0.02f);
-            transform.position = smoothedPosition;
-            if ((transform.position - downPosition).magnitude <= 0.02f)
+            Vector3 smoothedPosition = Vector3.Lerp(DoorLeaf.transform.position, downPosition, 0.02f);
+            DoorLeaf.transform.position = smoothedPosition;
+            if ((DoorLeaf.transform.position - downPosition).magnitude <= 0.02f)
                 movingDown = false;
         }
     }
