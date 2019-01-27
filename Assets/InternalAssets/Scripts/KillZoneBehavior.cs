@@ -18,7 +18,7 @@ public class KillZoneBehavior : TogglableInterface
         {
             pd.killPlayer();
         }
-        else if (armed && gameObject.CompareTag("Totem") && TotemBehavior.PlayerFusioned)
+        else if (armed && col.gameObject.CompareTag("Totem"))
         {
             pd.killTotem();
         }

@@ -12,6 +12,7 @@ TagManager:
   - MovableBlock
   - FloorSwitch
   - Walls
+  - IgnoredByTotemExit
   layers:
   - Default
   - TransparentFX
