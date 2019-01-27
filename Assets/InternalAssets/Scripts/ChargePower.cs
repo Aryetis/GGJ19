@@ -23,14 +23,29 @@ public class ChargePower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Look forward
+        if (!chargeActive && Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f && (Input.GetKeyDown("joystick button 2") || Input.GetKeyDown(KeyCode.C)))
+        {
+            Vector3 foo = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
+            Vector3 bar = (Input.GetAxis("Horizontal") * Camera.main.transform.right
+                    + Vector3.down * pm.gravity
+                    + Input.GetAxis("Vertical") * foo) * pm.m_speed * Time.deltaTime;
+
+            Vector3 tur = new Vector3(bar.x, 0, bar.z);
+            transform.rotation = Quaternion.LookRotation(tur);
+        }
+
         if ((Input.GetKeyDown("joystick button 2") || Input.GetKeyDown(KeyCode.C)) && Energy.Value > 0.0f && !chargeActive)
         {
+            // Disable usual player movements
             pm.enabled = false;
+            pm.arrowCharge.SetActive(true);
             Time.timeScale = 0.2f;
         }
         else if ((Input.GetKeyUp("joystick button 2") || Input.GetKeyDown(KeyCode.C) )&& !chargeActive )
         {
             Time.timeScale = 1.0f;
+            pm.arrowCharge.SetActive(false);
             // TODO spawn FX
             // TODO tweak stock camera speed value (to avoid catching up the cam while dashing)
             chargeActive = true;
