@@ -19,7 +19,7 @@ public class ElectricityTrapBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Totem")
+        if(other.gameObject.tag == "TotemField")
         {
             totemOnMe = true;
             foreach (Transform childLightning in transform)
