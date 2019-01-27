@@ -407,6 +407,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356325270509640366, guid: ac30f9c16512a154f8431ee1dc7d7739,
+        type: 3}
+      propertyPath: sceneNameToLoad
+      value: Credit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac30f9c16512a154f8431ee1dc7d7739, type: 3}
 --- !u!1001 &92027566
@@ -13829,6 +13834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561677989320726554, guid: ef6dce1a7dff35044b0b2129885bed27,
+        type: 3}
+      propertyPath: totemLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef6dce1a7dff35044b0b2129885bed27, type: 3}

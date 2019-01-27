@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    TotemBehavior tb;
+
+    private void Start()
+    {
+        tb = GameObject.Find("Totem").GetComponent<TotemBehavior>();
+    }
+
     private void Update()
     {
         if(Input.GetKeyUp("joystick button 6"))
@@ -16,7 +23,7 @@ public class PlayerDeath : MonoBehaviour
     {
         transform.Find("CharaVisu").gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         GetComponent<PlayerMovement>().enabled = false;
-        StartCoroutine(ReloadSceneAfterTime(3));
+        Invoke("reloadScene", 3);
     }
 
     public void reloadScene()
@@ -27,14 +34,8 @@ public class PlayerDeath : MonoBehaviour
 
     public void killTotem()
     {
-        StartCoroutine(ReloadSceneAfterTime(3));
-    }
+        tb.enabled = false;
 
-    IEnumerator ReloadSceneAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        Invoke("reloadScene", 3);
     }
 }
