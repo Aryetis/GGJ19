@@ -11,23 +11,32 @@ public class TextBoxBehaviour : MonoBehaviour
     [SerializeField]
     private float textDuration = 4;
 
+    private float timer=0;
+
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Text>().text = textContent;
-        StartCoroutine(DisappearTextAfterTime(textDuration));
+        timer = textDuration;
     }
 
-    IEnumerator DisappearTextAfterTime(float time)
+    private void Update()
     {
-        yield return new WaitForSeconds(time);
-        transform.parent.gameObject.SetActive(false);
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                transform.parent.gameObject.SetActive(false);
+            }
+
+        }
     }
 
     public void displayText(string text, float time)
     {
         transform.parent.gameObject.SetActive(true);
         GetComponent<Text>().text = text;
-        StartCoroutine(DisappearTextAfterTime(textDuration));
+        timer = time;
     }
 }
