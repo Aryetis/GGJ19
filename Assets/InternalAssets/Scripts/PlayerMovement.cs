@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float m_speed = 1.0f;
     public float gravity = 1.0f;
     public static float staticGravity;
+    [HideInInspector] public GameObject arrowCharge;
 
     private static Vector3 m_move;
     private static CharacterController CC;
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        arrowCharge = transform.Find("Arrow").gameObject;
+        arrowCharge.SetActive(false);
         m_collidingTotem = false;
         m_cameraType = 0;
         staticGravity = gravity;
@@ -84,7 +87,10 @@ public class PlayerMovement : MonoBehaviour
 
             // !!! TAKE CARE IF PLAYER IS ON SWITCH, THE SWITCH WON T RECEIVE THE OnTriggerExit EVENT !!!
             // => Remove interactor from floorswitch underneath (if any) manually
-            if (linkedFloorSwitch != null)
+            RaycastHit hitinfo;
+            Physics.Raycast(transform.position, Vector3.down, out hitinfo, 5.0f);
+            bool floorSwitchUnderPlayer = hitinfo.collider.gameObject.GetComponent<FloorSwitch>();
+            if (linkedFloorSwitch != null && floorSwitchUnderPlayer)
                 linkedFloorSwitch.DecreaseInteractors();
 
             // TODO Add FX & Animation
