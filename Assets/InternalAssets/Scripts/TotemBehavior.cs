@@ -10,6 +10,11 @@ public class TotemBehavior : MonoBehaviour
 
     private int m_cameraType = 0;
 
+    [SerializeField]
+    private int totemLevel = 3;
+
+    private Transform totemVisu;
+
     public static bool PlayerFusioned
     {
         get
@@ -52,6 +57,9 @@ public class TotemBehavior : MonoBehaviour
         m_exitPlayerCapsule.SetActive(false);
         allowUnfusion = true;
         justFusionedTimer = justFusionedResetTimerValue;
+
+        totemVisu = transform.Find("TotemVisu");
+        changeTotemLevel(totemLevel);
     }
     
     void Update()
@@ -115,6 +123,38 @@ public class TotemBehavior : MonoBehaviour
         {
             m_move = new Vector3(0, -gravity, 0) * m_speed * Time.deltaTime;
             CC.Move(m_move);
+        }
+    }
+
+    public void changeTotemLevel(int level)
+    {
+        totemLevel = level;
+        switch (level){
+            case 0:
+                foreach(Transform visu in totemVisu)
+                {
+                    visu.gameObject.SetActive(false);
+                }
+                break;
+            case 1:
+                foreach (Transform visu in totemVisu)
+                {
+                    visu.gameObject.SetActive(visu.name == "Turtle");
+                }
+                break;
+            case 2:
+                foreach (Transform visu in totemVisu)
+                {
+                    visu.gameObject.SetActive(visu.name == "Turtle" || visu.name == "Aries");
+                }
+                break;
+            case 3:
+                foreach (Transform visu in totemVisu)
+                {
+                    visu.gameObject.SetActive(true);
+                }
+                break;
+        
         }
     }
 }
