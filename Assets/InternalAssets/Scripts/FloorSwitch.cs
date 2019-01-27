@@ -12,6 +12,9 @@ public class FloorSwitch : MonoBehaviour
     [SerializeField] private GameObject GameObjectLinkedToAction;
     [SerializeField] private GameObject linkedButton;
     [SerializeField] private SwitchType switchType;
+    [SerializeField] private Material turnedOnMat, turnedOffMat;
+    //private Renderer interrupteurRenderer;
+
     public bool Toggled
     {
         get { return toggled; }
@@ -45,9 +48,17 @@ public class FloorSwitch : MonoBehaviour
             }
             linkedFloorSwitch = linkedButton.GetComponent<FloorSwitch>();
         }
+        if (turnedOffMat == null || turnedOnMat == null)
+        {
+            Debug.Log("Set turnedOn turnedOff materials for :" + gameObject.name);
+            Debug.Break();
+        }
+
+        //interrupteurRenderer = transform.Find("Interupteur").GetComponent<Renderer>();
+        //interrupteurRenderer.material = turnedOffMat;
     }
 
-    private void OnTriggerEnter(Collider col)
+private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
             || col.gameObject.CompareTag("MovableBlock"))
@@ -79,10 +90,19 @@ public class FloorSwitch : MonoBehaviour
             if (switchType == SwitchType.ToggleCombined)
             {
                 if (linkedFloorSwitch.Toggled)
+                {
+                    //GetComponent<Renderer>().material.SetColor("Albedo", Color.green);
+                    //interrupteurRenderer.material = turnedOnMat;
+                    GetComponent<Renderer>().material = turnedOnMat;
                     tiLinkedObj.ToggleOn();
+                }
             }
             else
+            {
+                GetComponent<Renderer>().material = turnedOnMat;
+                //GetComponent<Renderer>().material.SetColor("Albedo", Color.green);
                 tiLinkedObj.ToggleOn();
+            }
         }
     }
 
@@ -92,6 +112,8 @@ public class FloorSwitch : MonoBehaviour
         if (nbrOfInteractorOnButtons <= 0)
         {
             tiLinkedObj.ToggleOff();
+            GetComponent<Renderer>().material = turnedOffMat;
+            //GetComponent<Renderer>().material.SetColor("Albedo", Color.red);// = turnedOffMat;
             toggled = false;
         }
     }
