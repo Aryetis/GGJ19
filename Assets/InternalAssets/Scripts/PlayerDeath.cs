@@ -25,6 +25,11 @@ public class PlayerDeath : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
+    public void killTotem()
+    {
+        StartCoroutine(ReloadSceneAfterTime(3));
+    }
+
     IEnumerator ReloadSceneAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
