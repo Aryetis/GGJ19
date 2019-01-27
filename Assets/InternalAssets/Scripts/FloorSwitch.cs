@@ -6,29 +6,39 @@ public class FloorSwitch : MonoBehaviour
 {
     private enum SwitchType
     {
-        Toggle, OneWay, ToggleCombined
+        Toggle, OneWay, ToggleCombined, OneWayCombined
     }
 
     [SerializeField] private GameObject GameObjectLinkedToAction;
     [SerializeField] private GameObject linkedButton;
     [SerializeField] private SwitchType switchType;
     [SerializeField] private Material turnedOnMat, turnedOffMat;
-    //private Renderer interrupteurRenderer;
 
-    public bool Toggled
+    public bool localstate
     {
-        get { return toggled; }
-        private set { toggled = value; }
+        get { return m_localstate; }
+        private set
+        {
+            m_localstate = value;
+            GetComponent<Renderer>().material = (value) ? turnedOnMat : turnedOffMat;
+        }
     }
+    [HideInInspector] public bool combinedState = false;
 
     private TogglableInterface tiLinkedObj;
-    private int nbrOfInteractorOnButtons = 0;
+    private int nbrOfInteractorOnButtons;
     private FloorSwitch linkedFloorSwitch;
-    private bool toggled = false;
+    private bool m_localstate = false;
+    private int cpt;
 
     // Start is called before the first frame update
     void Start()
     {
+        combinedState = false;
+        m_localstate = false;
+        cpt = 0;
+
+        // Get linked object
         tiLinkedObj = GameObjectLinkedToAction.GetComponent<TogglableInterface>();
         if (tiLinkedObj == null)
         {
@@ -39,7 +49,9 @@ public class FloorSwitch : MonoBehaviour
             Debug.Log("Floor switch :" + gameObject.name + " not linked to a TogglableInterface");
             Debug.Break();
         }
-        if (switchType == SwitchType.ToggleCombined)
+
+        // Get linked switch
+        if (switchType == SwitchType.ToggleCombined || switchType == SwitchType.OneWayCombined)
         {
             if (linkedButton == null)
             {
@@ -48,73 +60,126 @@ public class FloorSwitch : MonoBehaviour
             }
             linkedFloorSwitch = linkedButton.GetComponent<FloorSwitch>();
         }
+
+        // Get materials
         if (turnedOffMat == null || turnedOnMat == null)
         {
             Debug.Log("Set turnedOn turnedOff materials for :" + gameObject.name);
             Debug.Break();
         }
-
-        //interrupteurRenderer = transform.Find("Interupteur").GetComponent<Renderer>();
-        //interrupteurRenderer.material = turnedOffMat;
     }
 
-private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
-            || col.gameObject.CompareTag("MovableBlock"))
-        {
-            // TODO anim button
+       || col.gameObject.CompareTag("MovableBlock"))
             IncreaseInteractors();
-        }
     }
 
     private void OnTriggerExit(Collider col)
     {
-        if (switchType == SwitchType.Toggle || switchType == SwitchType.ToggleCombined)
-        {
-            if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
-            || col.gameObject.CompareTag("MovableBlock"))
-            {
-                // TODO anim button
-                DecreaseInteractors();
-            }
-        }
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
+       || col.gameObject.CompareTag("MovableBlock"))
+            DecreaseInteractors();
     }
 
     public void IncreaseInteractors()
     {
-        ++nbrOfInteractorOnButtons;
-        if (!toggled)
+        switch (switchType)
         {
-            toggled = true;
-            if (switchType == SwitchType.ToggleCombined)
+            case SwitchType.Toggle :
             {
-                if (linkedFloorSwitch.Toggled)
+                cpt++;
+                if (!localstate)
                 {
-                    //GetComponent<Renderer>().material.SetColor("Albedo", Color.green);
-                    //interrupteurRenderer.material = turnedOnMat;
-                    GetComponent<Renderer>().material = turnedOnMat;
+                    localstate = true;
                     tiLinkedObj.ToggleOn();
                 }
+                break;
             }
-            else
+            case SwitchType.OneWay:
             {
-                GetComponent<Renderer>().material = turnedOnMat;
-                //GetComponent<Renderer>().material.SetColor("Albedo", Color.green);
-                tiLinkedObj.ToggleOn();
+                if(!localstate)
+                {
+                    localstate = true;
+                    tiLinkedObj.ToggleOn();
+                }
+                break;
             }
+            case SwitchType.ToggleCombined:
+            {
+                cpt++;
+                localstate = true;
+                if (linkedFloorSwitch.localstate && !combinedState)
+                {
+                    combinedState = true;
+                    linkedFloorSwitch.combinedState = true;
+                    tiLinkedObj.ToggleOn();
+                }
+                break;
+            }
+            case SwitchType.OneWayCombined:
+            {
+                if (!localstate)
+                {
+                    localstate = true;
+                    if (linkedFloorSwitch.localstate && !combinedState)
+                    {
+                        combinedState = true;
+                        linkedFloorSwitch.combinedState = true;
+                        tiLinkedObj.ToggleOn();
+                    }
+                }
+                break;
+            }
+            default: break;
         }
     }
 
     public void DecreaseInteractors()
     {
-        --nbrOfInteractorOnButtons;
-        if (nbrOfInteractorOnButtons <= 0)
+        switch (switchType)
         {
-            tiLinkedObj.ToggleOff();
-            GetComponent<Renderer>().material = turnedOffMat;
-            //GetComponent<Renderer>().material.SetColor("Albedo", Color.red);// = turnedOffMat;
-            toggled = false;
+            case SwitchType.Toggle:
+            {
+                cpt--;
+                if (cpt <= 0)
+                {
+                    localstate = false;
+                    tiLinkedObj.ToggleOff();
+                }
+                break;
+            }
+            case SwitchType.OneWay:
+            { break; }
+            case SwitchType.ToggleCombined:
+            {
+                cpt--;
+                if (cpt <= 0)
+                {
+                    localstate = false;
+                    if (combinedState)
+                    {
+                        combinedState = false;
+                        linkedFloorSwitch.combinedState = false;
+                        tiLinkedObj.ToggleOff();
+                    }
+                }
+                break;
+            }
+            case SwitchType.OneWayCombined:
+            {
+                cpt--;
+                if (!combinedState)
+                {
+                    if(cpt <= 0)
+                    {
+                        localstate = false;
+                    }
+                }
+                break;
+            }
+            default: break;
         }
     }
 }
