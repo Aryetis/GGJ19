@@ -23,7 +23,7 @@ public class PlayerDeath : MonoBehaviour
     {
         transform.Find("CharaVisu").gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         GetComponent<PlayerMovement>().enabled = false;
-        StartCoroutine(ReloadSceneAfterTime(3));
+        Invoke("reloadScene", 3);
     }
 
     public void reloadScene()
@@ -35,14 +35,7 @@ public class PlayerDeath : MonoBehaviour
     public void killTotem()
     {
         tb.enabled = false;
-        StartCoroutine(ReloadSceneAfterTime(3));
-    }
 
-    IEnumerator ReloadSceneAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        Invoke("reloadScene", 3);
     }
 }
