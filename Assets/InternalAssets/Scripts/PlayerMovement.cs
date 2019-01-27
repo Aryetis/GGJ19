@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
 
     private static Vector3 m_move;
     private static CharacterController CC;
-    private static bool m_collidingTotem = false;
+    private static bool m_collidingTotem;
     private GameObject Floor;
     private FloorSwitch linkedFloorSwitch;
-    private int m_cameraType = 0;
+    private int m_cameraType;
 
     // HACK to prevent player from tp-ing on a quantic collision bug after fusioning/unfusioning
     private bool justUnfusioned = true;
@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        m_collidingTotem = false;
+        m_cameraType = 0;
         staticGravity = gravity;
         CC = GetComponent<CharacterController>();
         Floor = GameObject.Find("Floor");
@@ -79,6 +81,10 @@ public class PlayerMovement : MonoBehaviour
             // TODO Add FX & Animation
             justUnfusioned = true;
             justUnfusionedTimer = justUnfusionedResetTimerValue;
+
+            // to prevent the player from just popping right back in the totem after 
+            // going out without even touching the damn totem again
+            m_collidingTotem = false;
 
             gameObject.SetActive(false); // Turn off player
             TotemBehavior.PlayerFusioned = true; // Turn on totem
