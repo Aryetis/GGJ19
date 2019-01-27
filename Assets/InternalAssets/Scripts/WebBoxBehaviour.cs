@@ -18,7 +18,7 @@ public class WebBoxBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentSide != Side.None && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() != null)
+        if(currentSide != Side.None && (Input.GetKeyDown("joystick button 3") || Input.GetKeyDown(KeyCode.V))&& player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() != null)
         {
             player.GetComponent<PlayerWebBehaviour>().attachBox(gameObject, currentSide);
         }

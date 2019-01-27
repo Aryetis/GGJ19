@@ -70,7 +70,7 @@ public class TotemBehavior : MonoBehaviour
                     justFusioned = false;
             }
 
-            if (Input.GetKeyUp("joystick button 6"))
+            if (Input.GetKeyUp("joystick button 6") || Input.GetKeyDown(KeyCode.Escape))
             {
                 Scene scene = SceneManager.GetActiveScene();
                 SceneManager.LoadScene(scene.name);
@@ -104,7 +104,7 @@ public class TotemBehavior : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
 
             // Totem Unfusion
-            if (Input.GetKeyUp("joystick button 1"))
+            if (Input.GetKeyUp("joystick button 1") || Input.GetKeyDown(KeyCode.X))
             {
                 //Vector3 spawnPosition = transform.position + transform.forward * 1.5f + Vector3.up * 0.5f
 

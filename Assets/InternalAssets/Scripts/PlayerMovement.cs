@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Totem fusion
-        if (m_collidingTotem && Input.GetKeyUp("joystick button 0"))
+        if (m_collidingTotem && (Input.GetKeyUp("joystick button 0") || Input.GetKeyDown(KeyCode.W)))
         {
 
             // !!! TAKE CARE IF PLAYER IS ON SWITCH, THE SWITCH WON T RECEIVE THE OnTriggerExit EVENT !!!
