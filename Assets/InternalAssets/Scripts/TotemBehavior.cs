@@ -11,17 +11,17 @@ public class TotemBehavior : MonoBehaviour
     private int m_cameraType = 0;
 
     public static bool PlayerFusioned
+    {
+        get
         {
-            get
-            {
-                return m_playerFusioned;
-            }
-            set
-            {
-                m_exitPlayerCapsule.SetActive(value);
-                m_playerFusioned = value;
-            }
+            return m_playerFusioned;
         }
+        set
+        {
+            m_exitPlayerCapsule.SetActive(value);
+            m_playerFusioned = value;
+        }
+    }
     public GameObject m_player;
     [HideInInspector] public bool allowUnfusion = true;
 
@@ -30,6 +30,11 @@ public class TotemBehavior : MonoBehaviour
     private static Vector3 m_move;
     private static CharacterController CC;
     private static GameObject m_exitPlayerCapsule;
+
+    // HACK to prevent player from tp-ing on a quantic collision bug after fusioning/unfusioning
+    private bool justFusioned = true;
+    private float justFusionedTimer;
+    private float justFusionedResetTimerValue = 0.05f;
 
     void Start()
     {
@@ -46,12 +51,22 @@ public class TotemBehavior : MonoBehaviour
         m_exitPlayerCapsule = transform.Find("ExitPlayerCapsule").gameObject;
         m_exitPlayerCapsule.SetActive(false);
         allowUnfusion = true;
+        justFusionedTimer = justFusionedResetTimerValue;
     }
     
     void Update()
     {
         if (PlayerFusioned)
         {
+            if (justFusioned)
+            {
+                justFusionedTimer -= Time.deltaTime;
+                if (justFusionedTimer > 0.0f)
+                    return;
+                else
+                    justFusioned = false;
+            }
+
             // Move
             if (m_cameraType == 0) // Usual one 
             {
@@ -91,6 +106,8 @@ public class TotemBehavior : MonoBehaviour
                     m_player.SetActive(true); // Turn on player
                     m_player.transform.position = m_exitPlayerCapsule.transform.position;
                     m_player.transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
+                    justFusioned = true; // arm it for next time the player switch to the totem
+                    justFusionedTimer = justFusionedResetTimerValue;
                 }
             }
         }

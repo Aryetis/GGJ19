@@ -14,16 +14,34 @@ public class PlayerMovement : MonoBehaviour
     private GameObject Floor;
     private FloorSwitch linkedFloorSwitch;
     private int m_cameraType = 0;
-    
+
+    // HACK to prevent player from tp-ing on a quantic collision bug after fusioning/unfusioning
+    private bool justUnfusioned = true;
+    private float justUnfusionedTimer;
+    private float justUnfusionedResetTimerValue = 0.05f;
+
     void Start()
     {
         staticGravity = gravity;
         CC = GetComponent<CharacterController>();
         Floor = GameObject.Find("Floor");
+        justUnfusionedTimer = justUnfusionedResetTimerValue;
     }
     
     void Update()
     {
+//if (CC.velocity.magnitude > 15.0f )
+//Debug.Break();
+        if (justUnfusioned)
+        {
+            justUnfusionedTimer -= Time.deltaTime;
+            if (justUnfusionedTimer > 0.0f)
+                return;
+            else
+                justUnfusioned = false;
+        }
+
+
         // Move
         if (m_cameraType == 0)
         {
@@ -59,6 +77,9 @@ public class PlayerMovement : MonoBehaviour
                 linkedFloorSwitch.DecreaseInteractors();
 
             // TODO Add FX & Animation
+            justUnfusioned = true;
+            justUnfusionedTimer = justUnfusionedResetTimerValue;
+
             gameObject.SetActive(false); // Turn off player
             TotemBehavior.PlayerFusioned = true; // Turn on totem
         }

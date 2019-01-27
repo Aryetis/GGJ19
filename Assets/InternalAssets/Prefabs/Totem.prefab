@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112602232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1.56}
+  m_LocalPosition: {x: 0, y: 0.5, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3532235035162385932}
@@ -648,7 +648,15 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7554408762393724099, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 7554408763081828893, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 7554408763622106246, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 7554408764071760654, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 7554408764144359217, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 7554408764162215560, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 3926687216708334437, guid: f476e8d69823c5641bb712936c149325, type: 3}
+    - {fileID: 6024767762093216907, guid: f476e8d69823c5641bb712936c149325, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f476e8d69823c5641bb712936c149325, type: 3}
 --- !u!4 &5691870015837005408 stripped
 Transform:
