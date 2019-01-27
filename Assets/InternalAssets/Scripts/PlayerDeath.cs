@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
-    TotemBehavior tb;
+    GameObject tb;
     PlayerMovement pm;
 
     private void Start()
     {
-        tb = GameObject.Find("Totem").GetComponent<TotemBehavior>();
+        tb = GameObject.Find("Totem");
         pm = GetComponent<PlayerMovement>();
     }
 
@@ -25,7 +25,7 @@ public class PlayerDeath : MonoBehaviour
     {
         transform.Find("CharaVisu").gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         pm.enabled = false;
-        tb.enabled = false;
+        tb.GetComponent<TotemBehavior>().enabled = false;
         Invoke("reloadScene", 3);
     }
 
@@ -37,7 +37,7 @@ public class PlayerDeath : MonoBehaviour
 
     public void killTotem()
     {
-        tb.enabled = false;
+        tb.GetComponent<TotemBehavior>().enabled = false;
         pm.enabled = false;
         Invoke("reloadScene", 3);
     }
