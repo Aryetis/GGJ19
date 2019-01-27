@@ -29,6 +29,8 @@ public class HideWallsInSight : MonoBehaviour
         {
             // Save it
             Renderer hitRenderer = hit.collider.gameObject.GetComponent<Renderer>();
+            if (hitRenderer == null)
+                continue;
             KeyValuePair<GameObject, Material> gameObjectOriginalMat = 
                 new KeyValuePair<GameObject, Material>(hit.collider.gameObject, hitRenderer.material);
             hiddenGameObjects.Add(gameObjectOriginalMat);
@@ -36,19 +38,5 @@ public class HideWallsInSight : MonoBehaviour
             // Alter it
             hitRenderer.material = transparentMaterial;
         }
-            
-        // Check that wals still need to be hidden
-        //foreach ( KeyValuePair<GameObject, GameObject> pair in hiddenGameObjects)
-        //{
-        //    RaycastHit hitinfo;
-        //    bool b = Physics.Raycast(pair.Key.transform.position,
-        //        Camera.main.transform.position - pair.Key.transform.position, out hitinfo, 200.0f);
-        //    if (!b || hitinfo.collider.gameObject.CompareTag("MainCamera"))
-        //    {
-        //        hiddenGameObjects.Remove(pair);
-        //        pair.Key.SetActive(true);
-        //        Destroy(pair.Value);
-        //    }
-        //}
     }
 }
