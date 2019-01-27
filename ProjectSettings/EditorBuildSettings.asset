@@ -12,13 +12,16 @@ EditorBuildSettings:
     path: Assets/InternalAssets/Scenes/MainMenu.unity
     guid: 14f746e8a1d69024d83a3916da43775e
   - enabled: 1
+    path: Assets/InternalAssets/Scenes/Level1.unity
+    guid: b04bc6f495ff8654cb5cd9b95a4a9e69
+  - enabled: 1
     path: Assets/InternalAssets/Scenes/Level1_WIP_Nathan.unity
     guid: 68ee7e9b32637194bb6723090cd05e9d
   - enabled: 1
-    path: Assets/InternalAssets/Scenes/Level2_Camille.unity
+    path: Assets/InternalAssets/Scenes/Level2.unity
     guid: 85b5bb0fd6737d24a8ab7db7937b5b33
   - enabled: 1
-    path: Assets/InternalAssets/Scenes/Level3_Camille 1.unity
+    path: Assets/InternalAssets/Scenes/Level4.unity
     guid: 552e3e6ceb91d424291a2429397e2c09
   - enabled: 1
     path: Assets/InternalAssets/Scenes/Credit.unity
