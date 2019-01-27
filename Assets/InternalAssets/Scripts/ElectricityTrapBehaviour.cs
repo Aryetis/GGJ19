@@ -18,9 +18,12 @@ public class ElectricityTrapBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if(other.gameObject.tag == "Player")
         {
+            foreach (Transform childLightning in transform)
+            {
+                childLightning.gameObject.SetActive(true);
+            }
             other.gameObject.GetComponent<PlayerDeath>().killPlayer();
         }
     }
