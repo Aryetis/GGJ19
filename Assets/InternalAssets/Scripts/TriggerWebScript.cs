@@ -12,6 +12,8 @@ public class TriggerWebScript : MonoBehaviour
         if (other.tag == "Player")
         {
             GetComponentInParent<WebPillarBehaviour>().playerTouchedTrigger(triggerSide);
+            if (other.GetComponentInParent<PlayerWebBehaviour>().getAttachedPillar() == null)
+                other.GetComponent<DisplayHelp>().showHelp('Y');
         }
     }
 
@@ -20,6 +22,8 @@ public class TriggerWebScript : MonoBehaviour
         if (other.tag == "Player")
         {
             GetComponentInParent<WebPillarBehaviour>().playerExitTrigger(triggerSide);
+            if (other.GetComponentInParent<PlayerWebBehaviour>().getAttachedPillar() == null)
+                other.GetComponent<DisplayHelp>().hideHelp();
         }
     }
 }

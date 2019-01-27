@@ -12,6 +12,8 @@ public class TriggerWebBox : MonoBehaviour
         if(other.tag == "Player")
         {
             GetComponentInParent<WebBoxBehaviour>().playerTouchedTrigger(triggerSide);
+            if (other.GetComponentInParent<PlayerWebBehaviour>().canAttachBox(triggerSide))
+                other.GetComponent<DisplayHelp>().showHelp('Y');
         }
     }
 
@@ -20,6 +22,8 @@ public class TriggerWebBox : MonoBehaviour
         if (other.tag == "Player")
         {
             GetComponentInParent<WebBoxBehaviour>().playerExitTrigger(triggerSide);
+            if (other.GetComponentInParent<PlayerWebBehaviour>().canAttachBox(triggerSide))
+                other.GetComponent<DisplayHelp>().hideHelp();
         }
     }
 }

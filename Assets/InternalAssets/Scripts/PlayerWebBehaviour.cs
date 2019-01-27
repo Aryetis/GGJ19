@@ -101,6 +101,7 @@ public class PlayerWebBehaviour : MonoBehaviour
         GetComponentInChildren<LineRenderer>().enabled = true;
         webLife = 100;
         attachedSide = side;
+        GetComponent<DisplayHelp>().hideHelp();
     }
 
     public void detachPillar()
@@ -111,6 +112,40 @@ public class PlayerWebBehaviour : MonoBehaviour
             attachedPillar = null;
             attachedSide = Side.None;
         }
+    }
+
+    public bool canAttachBox(Side side)
+    {
+        if (getAttachedPillar() == null)
+            return false;
+        switch (attachedSide)
+        {
+            case Side.Left:
+                if (side == Side.Right)
+                {
+                    return true;
+                }
+                break;
+            case Side.Right:
+                if (side == Side.Left)
+                {
+                    return true;
+                }
+                break;
+            case Side.Front:
+                if (side == Side.Back)
+                {
+                    return true;
+                }
+                break;
+            case Side.Back:
+                if (side == Side.Front)
+                {
+                    return true;
+                }
+                break;
+        }
+        return false;
     }
 
     public void attachBox(GameObject box, Side side)
