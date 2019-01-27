@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 1945301372}
   - component: {fileID: 1945301371}
   - component: {fileID: 1945301370}
+  - component: {fileID: 2082916262}
   m_Layer: 0
   m_Name: AxeTrap
   m_TagString: Untagged
@@ -366,3 +367,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animSpeed: 0.5
+--- !u!114 &2082916262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945301369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d09559d375eef4dbac71278a460a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

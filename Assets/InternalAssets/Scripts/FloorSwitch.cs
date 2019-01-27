@@ -6,25 +6,90 @@ public class FloorSwitch : MonoBehaviour
 {
     private enum SwitchType
     {
-        Toggle, Hold, Multiple
-    }
-    private enum ActionType
-    {
-        OpenDoor, TurnOff
+        Toggle, OneWay, ToggleCombined
     }
 
+    [SerializeField] private GameObject GameObjectLinkedToAction;
+    [SerializeField] private GameObject linkedButton;
     [SerializeField] private SwitchType switchType;
-    [SerializeField] private ActionType actionType;
+    public bool Toggled
+    {
+        get { return toggled; }
+        private set { toggled = value; }
+    }
+
+    private TogglableInterface tiLinkedObj;
+    private int nbrOfInteractorOnButtons = 0;
+    private FloorSwitch linkedFloorSwitch;
+    private bool toggled = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tiLinkedObj = GameObjectLinkedToAction.GetComponent<TogglableInterface>();
+        if (tiLinkedObj == null)
+        {
+            tiLinkedObj = GameObjectLinkedToAction.GetComponentInChildren<TogglableInterface>();
+        }
+        if (tiLinkedObj == null)
+        {
+            Debug.Log("Floor switch :" + gameObject.name + " not linked to a TogglableInterface");
+            Debug.Break();
+        }
+        if (switchType == SwitchType.ToggleCombined && linkedButton == null)
+        {
+            Debug.Log("Floor switch :" + gameObject.name + " is of type ToggleCombined yet not linked to another floor switch");
+            Debug.Break();
+        }
+        linkedFloorSwitch = linkedButton.GetComponent<FloorSwitch>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider col)
     {
-        
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
+            || col.gameObject.CompareTag("MovableBlock"))
+        {
+            // TODO anim button
+            IncreaseInteractors();
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (switchType == SwitchType.Toggle || switchType == SwitchType.ToggleCombined)
+        {
+            if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")
+            || col.gameObject.CompareTag("MovableBlock"))
+            {
+                // TODO anim button
+                DecreaseInteractors();
+            }
+        }
+    }
+
+    public void IncreaseInteractors()
+    {
+        ++nbrOfInteractorOnButtons;
+        if (!toggled)
+        {
+            toggled = true;
+            if (switchType == SwitchType.ToggleCombined)
+            {
+                if (linkedFloorSwitch.Toggled)
+                    tiLinkedObj.ToggleOn();
+            }
+            else
+                tiLinkedObj.ToggleOn();
+        }
+    }
+
+    public void DecreaseInteractors()
+    {
+        --nbrOfInteractorOnButtons;
+        if (nbrOfInteractorOnButtons <= 0)
+        {
+            tiLinkedObj.ToggleOff();
+            toggled = false;
+        }
     }
 }

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private static CharacterController CC;
     private static bool m_collidingTotem = false;
     private GameObject Floor;
-
+    private FloorSwitch linkedFloorSwitch;
     private int m_cameraType = 0;
     
     void Start()
@@ -54,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
         // Totem fusion
         if (m_collidingTotem && Input.GetKeyUp("joystick button 0"))
         {
+            // Remove an interactor from floorswitch underneath (if any)
+            if (linkedFloorSwitch != null)
+                linkedFloorSwitch.DecreaseInteractors();
+
             // TODO Add FX & Animation
             gameObject.SetActive(false); // Turn off player
             TotemBehavior.PlayerFusioned = true; // Turn on totem
@@ -62,6 +66,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider hit)
     {
+        if (hit.gameObject.CompareTag("FloorSwitch"))
+        {
+            linkedFloorSwitch = hit.gameObject.GetComponent<FloorSwitch>();
+        }
         if (hit.gameObject.CompareTag("Totem"))
         {
             m_collidingTotem = true;
@@ -70,6 +78,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider hit)
     {
+        if (hit.gameObject.CompareTag("FloorSwitch"))
+        {
+            linkedFloorSwitch = null;
+        }
         if (hit.gameObject.CompareTag("Totem"))
         {
             m_collidingTotem = false;

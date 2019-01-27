@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 837809159067133104}
   - component: {fileID: 837809159070524564}
   - component: {fileID: 837809159069427284}
+  - component: {fileID: 1908578068}
   m_Layer: 0
   m_Name: Interupteur
   m_TagString: Untagged
@@ -77,6 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1908578068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837809159067170960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017906219, y: 0.017906215, z: 0.0068900683}
+  m_Center: {x: -0.0000000013969839, y: -9.313224e-10, z: -0.0065549635}
 --- !u!1 &837809159067170964
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,9 +100,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837809159067133108}
+  - component: {fileID: 834124802}
+  - component: {fileID: 200668709}
   m_Layer: 0
   m_Name: FloorSwitch
-  m_TagString: Untagged
+  m_TagString: FloorSwitch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,13 +118,41 @@ Transform:
   m_GameObject: {fileID: 837809159067170964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6900253, y: 1.5, z: -25.0578}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 837809159067133104}
   - {fileID: 837809159067133116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &834124802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837809159067170964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8990abf393f01a458591a97c7c45059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObjectLinkedToAction: {fileID: 0}
+  linkedButton: {fileID: 0}
+  switchType: 0
+--- !u!65 &200668709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837809159067170964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5, y: 1, z: 4.5}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &837809159067170972
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +164,7 @@ GameObject:
   - component: {fileID: 837809159067133116}
   - component: {fileID: 837809159070524566}
   - component: {fileID: 837809159069427286}
+  - component: {fileID: 1908578067}
   m_Layer: 0
   m_Name: Socle
   m_TagString: Untagged
@@ -186,3 +231,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1908578067
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837809159067170972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 2d5afbebbb175aa4fa983d922090410d, type: 3}
