@@ -111,9 +111,9 @@ public class TotemBehavior : MonoBehaviour
                 {
                     // TODO Add FX & Animation
                     PlayerFusioned = false; // Turn on totem
-                    m_player.SetActive(true); // Turn on player
                     m_player.transform.position = m_exitPlayerCapsule.transform.position;
                     m_player.transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
+                    m_player.SetActive(true); // Turn on player
                     justFusioned = true; // arm it for next time the player switch to the totem
                     justFusionedTimer = justFusionedResetTimerValue;
                 }

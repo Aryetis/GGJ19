@@ -8,7 +8,7 @@ public class ElectricityTrapBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("TotemField"))
+        if (other.gameObject.CompareTag("TotemField"))
         {
             totemOnMe = true;
             foreach (Transform childLightning in transform)
