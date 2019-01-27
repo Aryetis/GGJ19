@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerPickUpBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private int totemLevel=0;
+    public int totemLevel=0;
 
     private GameObject totem;
     private Transform totemVisu;
