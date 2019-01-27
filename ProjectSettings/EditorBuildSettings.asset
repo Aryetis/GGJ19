@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/SplashScreen.unity
+    guid: f29beced49caa9f4cbad1780250f1383
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/MainMenu.unity
+    guid: 14f746e8a1d69024d83a3916da43775e
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/Level1_WIP_Nathan.unity
+    guid: 68ee7e9b32637194bb6723090cd05e9d
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/Level2_Camille.unity
+    guid: 85b5bb0fd6737d24a8ab7db7937b5b33
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/Level3_Camille 1.unity
+    guid: 552e3e6ceb91d424291a2429397e2c09
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/Credit.unity
+    guid: e670959c71d3e3c4581cdb737a37f2d3
+  - enabled: 1
+    path: Assets/InternalAssets/Scenes/Options.unity
+    guid: 2516c0448ab722148b8701c210784a1f
   m_configObjects: {}
