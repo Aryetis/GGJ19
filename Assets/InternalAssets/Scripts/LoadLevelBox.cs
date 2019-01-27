@@ -7,6 +7,13 @@ public class LoadLevelBox : MonoBehaviour
 {
     public string sceneNameToLoad;
 
+    private GameObject textBox;
+
+    private void Start()
+    {
+        textBox = GameObject.FindWithTag("TextBoxInfo");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Totem"))
@@ -17,8 +24,7 @@ public class LoadLevelBox : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("Player"))
         {
-            // TODO print UI message
-            Debug.Log("plz gimme totem");
+            textBox.GetComponent<TextBoxBehaviour>().displayText("Don't leave without your totem !", 3);
         }
     }
 

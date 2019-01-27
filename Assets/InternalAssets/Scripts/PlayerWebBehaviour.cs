@@ -101,7 +101,7 @@ public class PlayerWebBehaviour : MonoBehaviour
         GetComponentInChildren<LineRenderer>().enabled = true;
         webLife = 100;
         attachedSide = side;
-        GetComponent<DisplayHelp>().hideHelp();
+        GetComponent<DisplayHelp>().hideHelp('Y');
     }
 
     public void detachPillar()

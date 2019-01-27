@@ -23,7 +23,7 @@ public class TriggerWebBox : MonoBehaviour
         {
             GetComponentInParent<WebBoxBehaviour>().playerExitTrigger(triggerSide);
             if (other.GetComponentInParent<PlayerWebBehaviour>().canAttachBox(triggerSide))
-                other.GetComponent<DisplayHelp>().hideHelp();
+                other.GetComponent<DisplayHelp>().hideHelp('Y');
         }
     }
 }

@@ -95,6 +95,8 @@ public class PlayerMovement : MonoBehaviour
             // going out without even touching the damn totem again
             m_collidingTotem = false;
 
+            GetComponent<DisplayHelp>().hideHelp('A');
+
             gameObject.SetActive(false); // Turn off player
             TotemBehavior.PlayerFusioned = true; // Turn on totem
         }
@@ -109,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         if (hit.gameObject.CompareTag("Totem"))
         {
             m_collidingTotem = true;
+            GetComponent<DisplayHelp>().showHelp('A');
         }
     }
 
@@ -121,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
         if (hit.gameObject.CompareTag("Totem"))
         {
             m_collidingTotem = false;
+            GetComponent<DisplayHelp>().hideHelp('A');
         }
     }
 
