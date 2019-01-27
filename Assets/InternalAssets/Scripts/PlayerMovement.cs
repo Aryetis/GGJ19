@@ -81,7 +81,9 @@ public class PlayerMovement : MonoBehaviour
         // Totem fusion
         if (m_collidingTotem && Input.GetKeyUp("joystick button 0"))
         {
-            // Remove an interactor from floorswitch underneath (if any)
+
+            // !!! TAKE CARE IF PLAYER IS ON SWITCH, THE SWITCH WON T RECEIVE THE OnTriggerExit EVENT !!!
+            // => Remove interactor from floorswitch underneath (if any) manually
             if (linkedFloorSwitch != null)
                 linkedFloorSwitch.DecreaseInteractors();
 
@@ -102,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider hit)
     {
-        if (hit.gameObject.CompareTag("FloorSwitch"))
+        if (hit.gameObject.GetComponent<FloorSwitch>() != null)
         {
             linkedFloorSwitch = hit.gameObject.GetComponent<FloorSwitch>();
         }
@@ -115,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider hit)
     {
-        if (hit.gameObject.CompareTag("FloorSwitch"))
+        if (hit.gameObject.GetComponent<FloorSwitch>() != null)
         {
             linkedFloorSwitch = null;
         }
