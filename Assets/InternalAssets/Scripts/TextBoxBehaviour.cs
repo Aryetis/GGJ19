@@ -23,4 +23,11 @@ public class TextBoxBehaviour : MonoBehaviour
         yield return new WaitForSeconds(time);
         transform.parent.gameObject.SetActive(false);
     }
+
+    public void displayText(string text, float time)
+    {
+        transform.parent.gameObject.SetActive(true);
+        GetComponent<Text>().text = text;
+        StartCoroutine(DisappearTextAfterTime(textDuration));
+    }
 }
