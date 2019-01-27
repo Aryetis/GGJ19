@@ -8,18 +8,27 @@ public class DropTrapBehavior : TogglableInterface
     public float timeToStayOpen = 3.0f;
 
     private float timerToActivate, timerToReset;
-    private GameObject leftDoor, rightDoor;
-    private bool ticking = false;
-    private bool open = false;
-    private bool armed = true;
+    private bool ticking;
+    private bool armed;
+    private GameObject cube;
+    private Vector3 cubeUpPosition, cubeDownPosition;
+    private bool movingDown, movingUp;
+
+    private int cpt;
 
     // Start is called before the first frame update
     void Start()
     {
-        leftDoor = transform.parent.Find("LeftDoor").gameObject;
-        rightDoor = transform.parent.Find("RightDoor").gameObject;
+        cube = transform.Find("CubeTaMere").gameObject;
+        movingDown = false;
+        movingUp = false;
+        cpt = 0;
+        ticking = false;
+        armed = true;
         timerToActivate = timeToActivate;
         timerToReset = timeToStayOpen;
+        cubeUpPosition = cube.transform.position;
+        cubeDownPosition = cube.transform.position + Vector3.down * 4.0f;
     }
 
     void Update()
@@ -27,41 +36,52 @@ public class DropTrapBehavior : TogglableInterface
         if(ticking)
         {
             timerToActivate -= Time.deltaTime;
-            if (timerToActivate <= 0.0f)
+            if (timerToActivate <= 0.0f) // FIRE ! (it will animation will make it come back in place
             {
+                movingDown = true;
                 ticking = false;
-                open = true;
-                leftDoor.SetActive(false);
-                rightDoor.SetActive(false);
+                timerToActivate = timeToActivate;
             }
         }
 
-        if(open)
+        if (movingDown)
         {
-            timerToReset -= Time.deltaTime;
-            if (timerToReset <= 0.0f)
+            Vector3 smoothedPosition = Vector3.Lerp(cube.transform.position, cubeDownPosition, 0.04f);
+            cube.transform.position = smoothedPosition;
+            if ((cube.transform.position - cubeDownPosition).magnitude <= 0.02f)
             {
-                leftDoor.SetActive(true);
-                rightDoor.SetActive(true);
-                open = false;
+                movingDown = false;
+                movingUp = true;
             }
+        }
+        else if (movingUp)
+        {
+            Vector3 smoothedPosition = Vector3.Lerp(cube.transform.position, cubeUpPosition, 0.02f);
+            cube.transform.position = smoothedPosition;
+            if ((cube.transform.position - cubeUpPosition).magnitude <= 0.02f)
+                movingUp = false;
         }
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player") && armed)
+        if ((col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem")) && armed)
         {
+            cpt++;
             ticking = true;
         }
     }
 
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Totem"))
         {
-            ticking = false;
-            timerToActivate = timeToActivate;
+            cpt--;
+            if (cpt <= 0)
+            {
+                ticking = false;
+                timerToActivate = timeToActivate;
+            }
         }
     }
 
