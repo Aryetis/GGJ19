@@ -70,6 +70,7 @@ public class PlayerWebBehaviour : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, (attachedPillar.transform.position - transform.position), out hit) && hit.transform.gameObject != attachedPillar)
             {
+                Debug.Log(hit.collider.gameObject);
                 hasTakenDamage = true;
                 webLife -= damageObstructed;
             }
