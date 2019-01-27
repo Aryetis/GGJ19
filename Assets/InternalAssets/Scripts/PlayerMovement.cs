@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private float justUnfusionedTimer;
     private float justUnfusionedResetTimerValue = 0.05f;
 
+    private GameObject totem;
+
     void Start()
     {
         m_collidingTotem = false;
