@@ -73,6 +73,6 @@ public class ChargePower : MonoBehaviour
     {
         // TODO restore stock camera speed value
         chargeActive = false;
-        if (pm) pm.enabled = true;
+        pm.enabled = true;
     }
 }
