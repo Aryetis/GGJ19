@@ -64,6 +64,7 @@ public class PlayerWebBehaviour : MonoBehaviour
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, 0.015f);
                 transform.position = smoothedPosition;
                 hasTakenDamage = true;
+                Debug.Log("damageToofar");
                 webLife -= damageTooFar;
             }
 
