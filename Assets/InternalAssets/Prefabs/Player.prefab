@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774235701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.2}
+  m_LocalPosition: {x: 0, y: -98.74, z: -2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5575062785227378984}
@@ -602,6 +602,106 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[0]
+      value: 
+      objectReference: {fileID: 5532738733199568862}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[1]
+      value: 
+      objectReference: {fileID: 5532690615705758692}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[2]
+      value: 
+      objectReference: {fileID: 5533134090001889440}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[3]
+      value: 
+      objectReference: {fileID: 5532823336346513024}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[4]
+      value: 
+      objectReference: {fileID: 5532835397801941360}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[5]
+      value: 
+      objectReference: {fileID: 5533530758944670370}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[6]
+      value: 
+      objectReference: {fileID: 5532843221955641202}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[7]
+      value: 
+      objectReference: {fileID: 5533188074114727806}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[8]
+      value: 
+      objectReference: {fileID: 5532890875231118644}
+    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: springBones.Array.data[9]
+      value: 
+      objectReference: {fileID: 5533526801119304872}
+    - target: {fileID: 114431526221746550, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571243677217562072}
+    - target: {fileID: 114461912412804428, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571238826477803984}
+    - target: {fileID: 114300359557911570, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5570645227241236568}
+    - target: {fileID: 114294689787274210, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5570871651165801820}
+    - target: {fileID: 114280525452871136, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5570972464577751744}
+    - target: {fileID: 114381092608040870, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571421173868810108}
+    - target: {fileID: 114628705625588274, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571397568790842812}
+    - target: {fileID: 114647366317098476, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571232312921755330}
+    - target: {fileID: 114159397791016506, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5571364544686103426}
+    - target: {fileID: 114163360120092720, guid: f85c4948bfaac4e48b32c1254bdec6b8,
+        type: 3}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 5570890536843872294}
     - target: {fileID: 137405302731277726, guid: f85c4948bfaac4e48b32c1254bdec6b8,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -852,106 +952,6 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 5570838967424607574}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[0]
-      value: 
-      objectReference: {fileID: 5532738733199568862}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[1]
-      value: 
-      objectReference: {fileID: 5532690615705758692}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[2]
-      value: 
-      objectReference: {fileID: 5533134090001889440}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[3]
-      value: 
-      objectReference: {fileID: 5532823336346513024}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[4]
-      value: 
-      objectReference: {fileID: 5532835397801941360}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[5]
-      value: 
-      objectReference: {fileID: 5533530758944670370}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[6]
-      value: 
-      objectReference: {fileID: 5532843221955641202}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[7]
-      value: 
-      objectReference: {fileID: 5533188074114727806}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[8]
-      value: 
-      objectReference: {fileID: 5532890875231118644}
-    - target: {fileID: 114485262007393730, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: springBones.Array.data[9]
-      value: 
-      objectReference: {fileID: 5533526801119304872}
-    - target: {fileID: 114461912412804428, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571238826477803984}
-    - target: {fileID: 114431526221746550, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571243677217562072}
-    - target: {fileID: 114628705625588274, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571397568790842812}
-    - target: {fileID: 114300359557911570, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5570645227241236568}
-    - target: {fileID: 114294689787274210, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5570871651165801820}
-    - target: {fileID: 114163360120092720, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5570890536843872294}
-    - target: {fileID: 114280525452871136, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5570972464577751744}
-    - target: {fileID: 114647366317098476, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571232312921755330}
-    - target: {fileID: 114381092608040870, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571421173868810108}
-    - target: {fileID: 114159397791016506, guid: f85c4948bfaac4e48b32c1254bdec6b8,
-        type: 3}
-      propertyPath: child
-      value: 
-      objectReference: {fileID: 5571364544686103426}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f85c4948bfaac4e48b32c1254bdec6b8, type: 3}
 --- !u!4 &5570477430229533682 stripped

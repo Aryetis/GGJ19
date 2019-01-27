@@ -6265,7 +6265,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
       propertyPath: m_Text
-      value: The turtle is your shelter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1233930687, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
       propertyPath: textContent
