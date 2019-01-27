@@ -9,7 +9,12 @@ public class SplashScreenManager : MonoBehaviour
 
     void Start()
     {
-        SceneManager.LoadScene("MainMenu");
+        Invoke("LoadMainMenu", 4.0f);
         //ss.LoadScene("MainMenu");   
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
