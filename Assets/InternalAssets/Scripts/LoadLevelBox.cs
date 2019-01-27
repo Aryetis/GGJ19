@@ -11,7 +11,7 @@ public class LoadLevelBox : MonoBehaviour
 
     private void Start()
     {
-        textBox = GameObject.FindWithTag("TextBoxInfo");
+        textBox = GameObject.Find("TextBoxInfo");
     }
 
     private void OnTriggerEnter(Collider other)

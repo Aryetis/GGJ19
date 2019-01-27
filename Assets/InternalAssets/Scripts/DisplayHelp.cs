@@ -16,12 +16,7 @@ public class DisplayHelp : MonoBehaviour
     [SerializeField]
     private Sprite buttonY;
 
-    private Dictionary<char, int> countInputs = new Dictionary<char, int>();
-
-    private int ACount = 0;
-    private int BCount = 0;
-    private int XCount = 0;
-    private int YCount = 0;
+    private float timer = 0f;
     
     private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -29,32 +24,25 @@ public class DisplayHelp : MonoBehaviour
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
-        countInputs.Add('A', 0);
-        countInputs.Add('B', 0);
-        countInputs.Add('X', 0);
-        countInputs.Add('Y', 0);
     }
 
     private void Update()
     {
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                spriteRenderer.enabled = false;
+            }
+        }
         spriteRenderer.transform.LookAt(Camera.main.transform.position, Vector3.up);
     }
 
     public void showHelp(char button)
     {
         spriteRenderer.enabled = true;
-        countInputs[button]++;
-        int highestCount = 0;
-        char highestKey = '!';
-        foreach(char key in countInputs.Keys)
-        {
-            if(countInputs[key] > highestCount)
-            {
-                highestKey = key;
-            }
-        }
-
-        switch (highestKey)
+        switch (button)
         {
             case 'A':
                 spriteRenderer.sprite = buttonA;
@@ -70,30 +58,12 @@ public class DisplayHelp : MonoBehaviour
                 break;
         }
 
-        StartCoroutine(HideHelptAfterTime(1));
+        timer = 1;
 
-    }
-
-    IEnumerator HideHelptAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        foreach (char key in countInputs.Keys)
-        {
-            countInputs[key] = 0;
-        }
-        spriteRenderer.enabled = false;
     }
 
     public void hideHelp(char button)
     {
-        countInputs[button]--;
-        foreach (char key in countInputs.Keys)
-        {
-            if (countInputs[key]>0)
-            {
-                return;
-            }
-        }
-        spriteRenderer.enabled = false;
+        timer -= 0.5f;
     }
 }
