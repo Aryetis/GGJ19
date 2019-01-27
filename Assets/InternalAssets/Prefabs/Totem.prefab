@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 3532235035162385932}
   - component: {fileID: 3532235035162385933}
   - component: {fileID: 244136542}
+  - component: {fileID: 924014752}
   m_Layer: 0
   m_Name: Totem
   m_TagString: Totem
@@ -259,6 +260,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &924014752
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532235035162385931}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2750348218515844753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3476284596178077247, guid: f476e8d69823c5641bb712936c149325,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7554408762547557594, guid: f476e8d69823c5641bb712936c149325,
         type: 3}
       propertyPath: m_Mesh
@@ -581,6 +603,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7554408762980671445, guid: f476e8d69823c5641bb712936c149325,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7554408763049570982, guid: f476e8d69823c5641bb712936c149325,
         type: 3}
       propertyPath: m_Mesh
@@ -597,6 +624,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7554408763694097887, guid: f476e8d69823c5641bb712936c149325,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554408763694097884, guid: f476e8d69823c5641bb712936c149325,
         type: 3}
       propertyPath: m_Mesh
       value: 
