@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private GameObject Floor;
     private FloorSwitch linkedFloorSwitch;
     private int m_cameraType;
+    private GameObject m_charaVisu;
 
     // HACK to prevent player from tp-ing on a quantic collision bug after fusioning/unfusioning
     private bool justUnfusioned = true;
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         CC = GetComponent<CharacterController>();
         Floor = GameObject.Find("Floor");
         justUnfusionedTimer = justUnfusionedResetTimerValue;
+        m_charaVisu = transform.Find("CharaVisu").gameObject;
     }
     
     void Update()
@@ -67,9 +69,12 @@ public class PlayerMovement : MonoBehaviour
         }
         CC.Move(m_move);
 
-        // Look forward
+        // Look forward & play run animation
         if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
+        {
+            m_charaVisu.GetComponent<Animator>().SetBool("IsRun", true);
             transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
+        }
 
         // Totem fusion
         if (m_collidingTotem && Input.GetKeyUp("joystick button 0"))
