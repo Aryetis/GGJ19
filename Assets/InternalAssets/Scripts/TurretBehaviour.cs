@@ -51,7 +51,7 @@ public class TurretBehaviour : MonoBehaviour
     {
         transform.LookAt(player.transform);
 
-        interval = 0.2f + targettingTimer / targettingDuration * (1f - 0.2f);
+        interval = 0.2f + targettingTimer / targettingDuration * (0.8f - 0.2f);
         targettingTimer -= Time.fixedDeltaTime;
         laser.enabled = Mathf.PingPong(Time.time%targettingDuration, interval) > (interval / 2.0f);
 
@@ -73,11 +73,12 @@ public class TurretBehaviour : MonoBehaviour
 
     public void forgettingPlayer()
     {
-        if(targettingTimer < targettingDuration)
+        targettingTimer = targettingDuration;
+        /*if(targettingTimer < targettingDuration)
         {
             targettingTimer += Time.fixedDeltaTime;
             if (targettingTimer > targettingDuration)
                 targettingTimer = targettingDuration;
-        }
+        }*/
     }
 }
