@@ -383,7 +383,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27970
+  m_Name: pb_Mesh-161734
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -853,7 +853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28880
+  m_Name: pb_Mesh-162684
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1070,7 +1070,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28896
+  m_Name: pb_Mesh-162700
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1491,7 +1491,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28852
+  m_Name: pb_Mesh-162656
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2259,7 +2259,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28890
+  m_Name: pb_Mesh-162694
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2413,33 +2413,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &751794192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5575062785227378988, guid: ef6dce1a7dff35044b0b2129885bed27,
-    type: 3}
-  m_PrefabInstance: {fileID: 5575062785778324543}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &751794193
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751794192}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.2
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &772083640
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28858
+  m_Name: pb_Mesh-162662
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3262,7 +3242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28886
+  m_Name: pb_Mesh-162690
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3422,7 +3402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28898
+  m_Name: pb_Mesh-162702
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4182,7 +4162,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28882
+  m_Name: pb_Mesh-162686
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4858,7 +4838,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28860
+  m_Name: pb_Mesh-162664
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -5316,7 +5296,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28856
+  m_Name: pb_Mesh-162660
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -5568,7 +5548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28862
+  m_Name: pb_Mesh-162666
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6206,7 +6186,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28916
+  m_Name: pb_Mesh-162720
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6606,15 +6586,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1561677989320726554, guid: ef6dce1a7dff35044b0b2129885bed27,
-        type: 3}
-      propertyPath: totemLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1663780117, guid: ef6dce1a7dff35044b0b2129885bed27, type: 3}
-      propertyPath: CostPerSecond
-      value: 0.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef6dce1a7dff35044b0b2129885bed27, type: 3}
 --- !u!1001 &6243611444165076734
@@ -6708,40 +6679,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6243611443221850279, guid: 96bbb5c1490764d49aa66edc6702e8d0,
-        type: 3}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6243611443221850279, guid: 96bbb5c1490764d49aa66edc6702e8d0,
-        type: 3}
-      propertyPath: orthographic size
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930684, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930687, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: textContent
-      value: The turtle is your shelter - Press A to become one with your totem
-      objectReference: {fileID: 0}
-    - target: {fileID: 1233930687, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
-      propertyPath: textDuration
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96bbb5c1490764d49aa66edc6702e8d0, type: 3}
