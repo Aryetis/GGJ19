@@ -36,12 +36,15 @@ public class FloorSwitch : MonoBehaviour
             Debug.Log("Floor switch :" + gameObject.name + " not linked to a TogglableInterface");
             Debug.Break();
         }
-        if (switchType == SwitchType.ToggleCombined && linkedButton == null)
+        if (switchType == SwitchType.ToggleCombined)
         {
-            Debug.Log("Floor switch :" + gameObject.name + " is of type ToggleCombined yet not linked to another floor switch");
-            Debug.Break();
+            if (linkedButton == null)
+            {
+                Debug.Log("Floor switch :" + gameObject.name + " is of type ToggleCombined yet not linked to another floor switch");
+                Debug.Break();
+            }
+            linkedFloorSwitch = linkedButton.GetComponent<FloorSwitch>();
         }
-        linkedFloorSwitch = linkedButton.GetComponent<FloorSwitch>();
     }
 
     private void OnTriggerEnter(Collider col)
