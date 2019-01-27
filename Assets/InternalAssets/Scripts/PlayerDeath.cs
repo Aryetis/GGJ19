@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    TotemBehavior tb;
+
+    private void Start()
+    {
+        tb = GameObject.Find("Totem").GetComponent<TotemBehavior>();
+    }
+
     private void Update()
     {
         if(Input.GetKeyUp("joystick button 6"))
@@ -27,6 +34,7 @@ public class PlayerDeath : MonoBehaviour
 
     public void killTotem()
     {
+        tb.enabled = false;
         StartCoroutine(ReloadSceneAfterTime(3));
     }
 
