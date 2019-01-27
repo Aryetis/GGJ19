@@ -16,15 +16,23 @@ public class DisplayHelp : MonoBehaviour
     [SerializeField]
     private Sprite buttonY;
 
-    private int helpCount = 0;
+    private Dictionary<char, int> countInputs = new Dictionary<char, int>();
 
-
+    private int ACount = 0;
+    private int BCount = 0;
+    private int XCount = 0;
+    private int YCount = 0;
+    
     private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
+        countInputs.Add('A', 0);
+        countInputs.Add('B', 0);
+        countInputs.Add('X', 0);
+        countInputs.Add('Y', 0);
     }
 
     private void Update()
@@ -34,11 +42,19 @@ public class DisplayHelp : MonoBehaviour
 
     public void showHelp(char button)
     {
-        if (helpCount < 0)
-            helpCount = 0;
-        helpCount++;
         spriteRenderer.enabled = true;
-        switch (button)
+        countInputs[button]++;
+        int highestCount = 0;
+        char highestKey = '!';
+        foreach(char key in countInputs.Keys)
+        {
+            if(countInputs[key] > highestCount)
+            {
+                highestKey = key;
+            }
+        }
+
+        switch (highestKey)
         {
             case 'A':
                 spriteRenderer.sprite = buttonA;
@@ -52,16 +68,32 @@ public class DisplayHelp : MonoBehaviour
             case 'Y':
                 spriteRenderer.sprite = buttonY;
                 break;
-            default:
-                Debug.Log(button + " is not a recognized input");
-                break;
         }
+
+        StartCoroutine(HideHelptAfterTime(1));
+
     }
 
-    public void hideHelp()
+    IEnumerator HideHelptAfterTime(float time)
     {
-        helpCount--;
-        if(helpCount <= 0)
-            spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(time);
+        foreach (char key in countInputs.Keys)
+        {
+            countInputs[key] = 0;
+        }
+        spriteRenderer.enabled = false;
+    }
+
+    public void hideHelp(char button)
+    {
+        countInputs[button]--;
+        foreach (char key in countInputs.Keys)
+        {
+            if (countInputs[key]>0)
+            {
+                return;
+            }
+        }
+        spriteRenderer.enabled = false;
     }
 }
