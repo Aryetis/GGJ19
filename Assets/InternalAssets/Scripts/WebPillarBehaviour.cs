@@ -19,7 +19,7 @@ public class WebPillarBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentSide != Side.None && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() == null)
+        if(currentSide != Side.None && player.GetComponent<PlayerWebBehaviour>().enabled == true && Input.GetKeyDown("joystick button 3") && player.GetComponent<PlayerWebBehaviour>().getAttachedPillar() == null)
         {
             player.GetComponent<PlayerWebBehaviour>().attachPillar(gameObject, currentSide);
         }

@@ -59,7 +59,8 @@ public class ChargePower : MonoBehaviour
             // TODO Spawn FX
             Destroy(hit.gameObject);
         }
-        else if (hit.gameObject.CompareTag("Ramp") || hit.gameObject.CompareTag("Floor") || hit.gameObject.CompareTag("FloorSwitch"))
+        else if (hit.gameObject.CompareTag("Ramp") || hit.gameObject.CompareTag("Floor") 
+            || hit.gameObject.CompareTag("FloorSwitch") || hit.gameObject.CompareTag("IgnoredByTotemExit") )
             return;
         else
         {
