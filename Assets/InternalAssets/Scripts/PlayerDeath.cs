@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
-    GameObject tb;
-    PlayerMovement pm;
+    private GameObject tb;
+    private PlayerMovement pm;
 
     private void Start()
     {
