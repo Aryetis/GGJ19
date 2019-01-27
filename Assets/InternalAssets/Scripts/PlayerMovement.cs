@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         CC.Move(m_move);
 
         // Look forward
-        if (Input.GetAxis("Horizontal") != 0.0f && Input.GetAxis("Vertical") != 0.0f)
+        if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
             transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
 
         // Totem fusion

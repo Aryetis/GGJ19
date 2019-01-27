@@ -53,14 +53,14 @@ public class TotemBehavior : MonoBehaviour
         if (PlayerFusioned)
         {
             // Move
-            if (m_cameraType == 0)
+            if (m_cameraType == 0) // Usual one 
             {
                 Vector3 foo = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
                 m_move = (Input.GetAxis("Horizontal") * Camera.main.transform.right
                         + Vector3.down * gravity
                         + Input.GetAxis("Vertical") * foo) * m_speed * Time.deltaTime;
             }
-            else
+            else // Isometric / diagonal one
             {
                 m_move = new Vector3
                 (
@@ -76,7 +76,7 @@ public class TotemBehavior : MonoBehaviour
             CC.Move(m_move);
 
             // Look forward
-            if (Input.GetAxis("Horizontal") != 0.0f && Input.GetAxis("Vertical") != 0.0f)
+            if (Input.GetAxisRaw("Horizontal") != 0.0f || Input.GetAxisRaw("Vertical") != 0.0f)
                 transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
 
             // Totem Unfusion
