@@ -11,17 +11,17 @@ public class TotemBehavior : MonoBehaviour
     private int m_cameraType = 0;
 
     public static bool PlayerFusioned
+    {
+        get
         {
-            get
-            {
-                return m_playerFusioned;
-            }
-            set
-            {
-                m_exitPlayerCapsule.SetActive(value);
-                m_playerFusioned = value;
-            }
+            return m_playerFusioned;
         }
+        set
+        {
+            m_exitPlayerCapsule.SetActive(value);
+            m_playerFusioned = value;
+        }
+    }
     public GameObject m_player;
     [HideInInspector] public bool allowUnfusion = true;
 
@@ -30,6 +30,11 @@ public class TotemBehavior : MonoBehaviour
     private static Vector3 m_move;
     private static CharacterController CC;
     private static GameObject m_exitPlayerCapsule;
+
+    // HACK to prevent player from tp-ing on a quantic collision bug after fusioning/unfusioning
+    private bool justFusioned = true;
+    private float justFusionedTimer;
+    private float justFusionedResetTimerValue = 0.05f;
 
     void Start()
     {
@@ -46,21 +51,31 @@ public class TotemBehavior : MonoBehaviour
         m_exitPlayerCapsule = transform.Find("ExitPlayerCapsule").gameObject;
         m_exitPlayerCapsule.SetActive(false);
         allowUnfusion = true;
+        justFusionedTimer = justFusionedResetTimerValue;
     }
     
     void Update()
     {
         if (PlayerFusioned)
         {
+            if (justFusioned)
+            {
+                justFusionedTimer -= Time.deltaTime;
+                if (justFusionedTimer > 0.0f)
+                    return;
+                else
+                    justFusioned = false;
+            }
+
             // Move
-            if (m_cameraType == 0)
+            if (m_cameraType == 0) // Usual one 
             {
                 Vector3 foo = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
                 m_move = (Input.GetAxis("Horizontal") * Camera.main.transform.right
                         + Vector3.down * gravity
                         + Input.GetAxis("Vertical") * foo) * m_speed * Time.deltaTime;
             }
-            else
+            else // Isometric / diagonal one
             {
                 m_move = new Vector3
                 (
@@ -76,7 +91,7 @@ public class TotemBehavior : MonoBehaviour
             CC.Move(m_move);
 
             // Look forward
-            if (Input.GetAxis("Horizontal") != 0.0f && Input.GetAxis("Vertical") != 0.0f)
+            if (Input.GetAxisRaw("Horizontal") != 0.0f || Input.GetAxisRaw("Vertical") != 0.0f)
                 transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
 
             // Totem Unfusion
@@ -91,6 +106,8 @@ public class TotemBehavior : MonoBehaviour
                     m_player.SetActive(true); // Turn on player
                     m_player.transform.position = m_exitPlayerCapsule.transform.position;
                     m_player.transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
+                    justFusioned = true; // arm it for next time the player switch to the totem
+                    justFusionedTimer = justFusionedResetTimerValue;
                 }
             }
         }

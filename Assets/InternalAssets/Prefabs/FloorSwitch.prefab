@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1908578068}
   m_Layer: 0
   m_Name: Interupteur
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameObjectLinkedToAction: {fileID: 0}
   linkedButton: {fileID: 0}
-  switchType: 0
+  switchType: 1
 --- !u!65 &200668709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 1908578067}
   m_Layer: 0
   m_Name: Socle
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
