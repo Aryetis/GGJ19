@@ -23,9 +23,9 @@ public class TotemBehavior : MonoBehaviour
         }
     }
     public GameObject m_player;
-    [HideInInspector] public bool allowUnfusion = true;
+    [HideInInspector] public bool allowUnfusion;
 
-    private static bool m_playerFusioned = false;
+    private static bool m_playerFusioned;
     private GameObject m_field;
     private static Vector3 m_move;
     private static CharacterController CC;
@@ -38,6 +38,8 @@ public class TotemBehavior : MonoBehaviour
 
     void Start()
     {
+        m_playerFusioned = false;
+        allowUnfusion = true;
         m_field = transform.Find("Field").gameObject;
         m_field.transform.localScale = new Vector3(FieldRadius, FieldRadius, FieldRadius);
         if (m_player == null)
