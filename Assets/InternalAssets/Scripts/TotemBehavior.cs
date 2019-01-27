@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TotemBehavior : MonoBehaviour
 {
@@ -67,6 +68,12 @@ public class TotemBehavior : MonoBehaviour
                     return;
                 else
                     justFusioned = false;
+            }
+
+            if (Input.GetKeyUp("joystick button 6"))
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
             }
 
             // Move

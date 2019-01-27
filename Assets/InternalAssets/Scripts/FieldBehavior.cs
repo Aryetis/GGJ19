@@ -16,6 +16,13 @@ public class FieldBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            Outline outline = other.gameObject.AddComponent<Outline>();
+            outline.OutlineMode = Outline.Mode.OutlineAll;
+            outline.OutlineColor = Color.cyan;
+            outline.OutlineWidth = 5f;
+        }
         if (other.GetComponent<TurretBehaviour>())
         {
             other.GetComponent<TurretBehaviour>().enabled = false;
@@ -27,6 +34,10 @@ public class FieldBehavior : MonoBehaviour
         if (other.GetComponent<TurretBehaviour>())
         {
             other.GetComponent<TurretBehaviour>().enabled = true;
+        }
+        if (other.CompareTag("Player"))
+        {
+            Destroy(other.gameObject.GetComponent<Outline>());
         }
     }
 }
