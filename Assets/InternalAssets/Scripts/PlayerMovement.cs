@@ -87,7 +87,10 @@ public class PlayerMovement : MonoBehaviour
 
             // !!! TAKE CARE IF PLAYER IS ON SWITCH, THE SWITCH WON T RECEIVE THE OnTriggerExit EVENT !!!
             // => Remove interactor from floorswitch underneath (if any) manually
-            if (linkedFloorSwitch != null)
+            RaycastHit hitinfo;
+            Physics.Raycast(transform.position, Vector3.down, out hitinfo, 5.0f);
+            bool floorSwitchUnderPlayer = hitinfo.collider.gameObject.GetComponent<FloorSwitch>();
+            if (linkedFloorSwitch != null && floorSwitchUnderPlayer)
                 linkedFloorSwitch.DecreaseInteractors();
 
             // TODO Add FX & Animation
