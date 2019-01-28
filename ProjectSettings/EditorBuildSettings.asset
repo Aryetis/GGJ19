@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: 552e3e6ceb91d424291a2429397e2c09
   - enabled: 1
     path: Assets/InternalAssets/Scenes/Credit.unity
-    guid: e670959c71d3e3c4581cdb737a37f2d3
+    guid: 3e0bc3c6780a9c846b80eabdce6d4ed2
   - enabled: 1
     path: Assets/InternalAssets/Scenes/Options.unity
     guid: 2516c0448ab722148b8701c210784a1f
