@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float justUnfusionedResetTimerValue = 0.05f;
 
     private GameObject totem;
+    private bool anim_idling;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         Floor = GameObject.Find("Floor");
         justUnfusionedTimer = justUnfusionedResetTimerValue;
         m_charaVisu = transform.Find("CharaVisu").gameObject;
+        anim_idling = false;
     }
     
     void Update()
@@ -77,8 +79,17 @@ public class PlayerMovement : MonoBehaviour
         // Look forward & play run animation
         if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
         {
+            anim_idling = false;
             m_charaVisu.GetComponent<Animator>().SetBool("IsRun", true);
             transform.rotation = Quaternion.LookRotation(new Vector3(m_move.x, 0, m_move.z));
+        }
+        else
+        {
+            if (!anim_idling)
+            {
+                anim_idling = true;
+                m_charaVisu.GetComponent<Animator>().SetBool("IsRun", false);
+            }
         }
 
         // Totem fusion

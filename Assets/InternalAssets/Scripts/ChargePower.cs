@@ -12,12 +12,14 @@ public class ChargePower : MonoBehaviour
     private bool chargeActive;
     private Vector3 m_move;
     private CharacterController CC;
+    private GameObject m_charaVisu;
 
     // Start is called before the first frame update
     void Start()
     {
         pm = GetComponent<PlayerMovement>();
         CC = GetComponent<CharacterController>();
+        m_charaVisu = transform.Find("CharaVisu").gameObject;
     }
 
     // Update is called once per frame
@@ -57,6 +59,9 @@ public class ChargePower : MonoBehaviour
                 StopCharge();
             else
             {
+                // Play anim
+                m_charaVisu.GetComponent<Animator>().SetBool("IsRun", true);
+
                 // Move 
                 m_move = new Vector3(transform.forward.x, -gravityWhileDashing, transform.forward.z) * Speed * Time.deltaTime;
                 CC.Move(m_move);
@@ -89,6 +94,7 @@ public class ChargePower : MonoBehaviour
     private void StopCharge()
     {
         // TODO restore stock camera speed value
+        m_charaVisu.GetComponent<Animator>().SetBool("IsRun", false);
         chargeActive = false;
         pm.enabled = true;
     }
