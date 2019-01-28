@@ -14,6 +14,15 @@ public class HideWallsInSight : MonoBehaviour
         hiddenGameObjects = new HashSet<KeyValuePair<GameObject, Material>>();
     }
 
+    // OnDisable reset every ghost
+    void OnDisable()
+    {
+        foreach (KeyValuePair<GameObject, Material> pair in hiddenGameObjects)
+        {
+            pair.Key.GetComponent<Renderer>().material = pair.Value;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
