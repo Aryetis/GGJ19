@@ -9,7 +9,7 @@ public class CreditSceneManager : MonoBehaviour
 
     void Start()
     {
-        Invoke("LoadMainMenu", 8.0f);
+        Invoke("LoadMainMenu", 6.0f);
         //ss.LoadScene("MainMenu");   
     }
 
