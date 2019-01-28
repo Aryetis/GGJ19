@@ -42,7 +42,7 @@ public class ChargePower : MonoBehaviour
             pm.arrowCharge.SetActive(true);
             Time.timeScale = 0.2f;
         }
-        else if ((Input.GetKeyUp("joystick button 2") || Input.GetKeyDown(KeyCode.C) )&& !chargeActive )
+        else if ((Input.GetKeyUp("joystick button 2") || Input.GetKeyUp(KeyCode.C) )&& !chargeActive )
         {
             Time.timeScale = 1.0f;
             pm.arrowCharge.SetActive(false);

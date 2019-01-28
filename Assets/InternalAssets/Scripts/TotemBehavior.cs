@@ -19,7 +19,7 @@ public class TotemBehavior : MonoBehaviour
         }
         set
         {
-            m_exitPlayerCapsule.SetActive(value);
+            if(m_exitPlayerCapsule)m_exitPlayerCapsule.SetActive(value);
             m_playerFusioned = value;
         }
     }
