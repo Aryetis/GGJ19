@@ -43,6 +43,9 @@ public class TurretBehaviour : MonoBehaviour
 
     private bool isPlayerInSight()
     {
+        if (player.GetComponent<Outline>()) {
+            return false;
+        }
         RaycastHit hit;
         return (Vector3.Distance(transform.position, player.transform.position) <= enabledRadius && Physics.Raycast(transform.position, (player.transform.position - transform.position), out hit) && hit.transform.gameObject == player);
     }
